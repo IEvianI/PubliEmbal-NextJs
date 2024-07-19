@@ -15,9 +15,9 @@ const FirstSection = () => {
       });
   }, []);
   
-  const product1 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product1?.data?.attributes?.url;
-  const product2 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product2?.data?.attributes?.url;
-  const product3 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product3?.data?.attributes?.url;
+  const product1 = data.slider_img_product1?.data?.attributes?.url;
+  const product2 = data.slider_img_product2?.data?.attributes?.url;
+  const product3 = data.slider_img_product3?.data?.attributes?.url;
 
   if (!data) {
     return <div>Chargement...</div>;
