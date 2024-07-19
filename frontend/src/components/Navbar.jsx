@@ -14,7 +14,7 @@ const Navbar = () => {
                 {/* LINKS */}
                 <div className="flex gap-20 text-black font-semibold font-uni">
                     <Link href="/" className="flex items-center gap-2">
-                    <span>Nos solutions d'emballages</span>
+                    <span>{`Nos solutions d'emballages`}</span>
                     </Link>
                     <Link href="/" className="flex items-center gap-2">
                     <span>Nos services</span>
