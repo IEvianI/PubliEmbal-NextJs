@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Uni+Sans:wght@600&display=swap');
+
+
+@font-face {
+  font-family: 'Uni Sans';
+  src: url('/fonts/Uni-Sans-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Uni Sans';
+  src: url('/fonts/Uni-Sans-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Uni Sans';
+  src: url('/fonts/Uni-Sans-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Mont Blanc';
+  src: url('/fonts/MontBlanc-Trial-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+@font-face {
+  font-family: 'Mont Blanc';
+  src: url('/fonts/MontBlanc-Trial-Bold.otf') format('opentype');
+  font-weight: 900;
+  font-style: light;
+}
+
+@font-face {
+  font-family: 'Marydale';
+  src: url('/fonts/Marydale-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Marydale';
+  src: url('/fonts/Marydale-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: bold;
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --font-primary: 'Uni Sans', sans-serif;
+  --font-secondary: 'Mont Blanc', sans-serif;
+  --font-third: 'Marydale', sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  font-family: var(--font-primary);
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .font-primary {
+    font-family: var(--font-primary);
+  }
+  .font-secondary {
+    font-family: var(--font-secondary);
+  }
+  .font-third {
+    font-family: var(--font-third);
+  }
+}
+
+
+.highlight {
+  position: relative;
+  display: inline-block;
+}
+
+.highlight::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 50%;
+  width: 100%;
+  opacity: 50%;
+  background-color: #FDC52F; 
+  z-index: -1;
+  border-radius: 5px;
+  transform: rotate(-3deg);
+}
+
+.border-sides::before,
+.border-sides::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: #000; /* Adjust the color as needed */
+}
+
+.border-sides::before {
+  left: 0;
+}
+
+.border-sides::after {
+  right: 0;
+}

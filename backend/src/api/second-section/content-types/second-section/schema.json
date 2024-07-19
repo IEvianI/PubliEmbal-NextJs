@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "second_sections",
+  "info": {
+    "singularName": "second-section",
+    "pluralName": "second-sections",
+    "displayName": "Second-section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_metiers": {
+      "type": "string"
+    },
+    "metier_hook": {
+      "type": "string"
+    }
+  }
+}

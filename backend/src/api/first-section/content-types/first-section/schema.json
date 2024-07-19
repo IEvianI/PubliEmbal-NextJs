@@ -1,0 +1,58 @@
+{
+  "kind": "singleType",
+  "collectionName": "first_sections",
+  "info": {
+    "singularName": "first-section",
+    "pluralName": "first-sections",
+    "displayName": "First-section",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slider_baseline": {
+      "type": "string"
+    },
+    "slider_short_description": {
+      "type": "text"
+    },
+    "slider_img_product1": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slider_img_product2": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slider_img_product3": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "slider_text_button": {
+      "type": "string"
+    },
+    "slider_hook_button": {
+      "type": "string"
+    },
+    "slider_baseline_2": {
+      "type": "string"
+    },
+    "slider_baseline_3": {
+      "type": "string"
+    }
+  }
+}
