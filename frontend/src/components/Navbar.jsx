@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import MobileMenu from "./MobileMenu";
 
 const Navbar = () => {
     return (
@@ -35,8 +36,9 @@ const Navbar = () => {
             <div className="hidden xl:flex p-2 border-2 items-center rounded-md" style={{borderColor: "#5CBDEC"}}>
                     <Image src="/search.svg" alt="" width={18} height={18} />
                 </div>
-                        <button className="p-2 rounded-md pl-10 pr-10 font-primary font-bold" style={{backgroundColor: "#5CBDEC", color: "white"}}>Bouton</button>
+                        <button className="p-2 rounded-md pl-10 pr-10 font-primary font-bold hidden md:block" style={{backgroundColor: "#5CBDEC", color: "white"}}>Bouton</button>
             </div>
+            <MobileMenu />
             </div>
             </div>
     )

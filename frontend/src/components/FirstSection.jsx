@@ -25,23 +25,23 @@ const FirstSection = () => {
 
   return (
     <div className="p-12 text-center relative">
-        <div className='ml-96 mr-96'>
-          <h1 className="font-bold mb-4 font-secondary uppercase text-6xl border-2 p-12 text-custom-green">
+        <div className='mx-0 md:mx-24 lg:mx-96'>
+          <h1 className="font-bold mb-4 font-secondary uppercase text-6xl max-[767px]:text-4xl border-2 p-12 text-custom-green">
             <span>{data.slider_baseline}</span><br></br> <span>{data.slider_baseline_3}</span> <span className='font-third font-regular normal-case highlight'>{data.slider_baseline_2}</span>
           </h1>
         </div>
-        <p className="flex text-lg mb-6 w-1/3 mx-auto items-center justify-center text-gray-600">{data.slider_short_description}</p>
+        <p className="flex text-lg mb-6 max-[767px]:mb-2 w-1/3 max-[767px]:w-full mx-auto items-center justify-center text-gray-600">{data.slider_short_description}</p>
         
-        <div className="relative flex justify-center items-center mb-6">
-          <img src="/line.png" alt="line" className="absolute inset-x-0 top-1/2 transform z-0" />
-          <div className="relative z-10 flex gap-8">
-            <img src={product1} alt="Product 1" className="w-96 h-96 object-contain" />
-            <img src={product2} alt="Product 2" className="w-96 h-96 object-contain" />
-            <img src={product3} alt="Product 3" className="w-96 h-96 object-contain" />
+        <div className="relative flex justify-center items-center max-[767px]:mb-2 mb-6">
+          <img src="/line.png" alt="line" className="absolute md:flex md:flex-column inset-x-0 top-1/2 transform z-0" />
+          <div className="relative z-10 max-[767px]:block flex max-[767px]:flex-column gap-8">
+            <img src={product1} alt="Product 1" className="w-96 h-96 max-[767px]:h-64 object-contain" />
+            <img src={product2} alt="Product 2" className="w-96 h-96 max-[767px]:h-64 object-contain" />
+            <img src={product3} alt="Product 3" className="w-96 h-96 max-[767px]:h-64 object-contain" />
           </div>
         </div>
         
-        <div className="flex flex-row mt-8 justify-center items-center mr-60">
+        <div className="flex flex-row mt-8 justify-center items-center mr-60 max-[767px]:mr-0">
           <a className="text-black -rotate-6 font-third w-32" style={{ opacity: "20%" }}>
             {data.slider_hook_button}
           </a>
