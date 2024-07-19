@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 function MetiersListItem({ metier }) {
   const { metier_title, metier_img, metier_color } = metier.attributes;
-  const imgUrl = 'http://localhost:1337' + metier_img?.data?.attributes?.url;
+  const imgUrl = 'https://upbeat-card-be7fe087f4.strapiapp.com' + metier_img?.data?.attributes?.url;
 
   return (
     <div className="relative w-72 h-72 overflow-hidden m-2">

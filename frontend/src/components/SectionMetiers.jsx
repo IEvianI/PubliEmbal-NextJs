@@ -3,12 +3,12 @@ import MetiersList from './metiers/MetiersList';
 import { useEffect, useState } from 'react';
 
 const SectionMetiers = () => {
-  const { response, error, isLoading } = useFetch('http://localhost:1337/api/metiers?populate=*');
+  const { response, error, isLoading } = useFetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/metiers?populate=*');
   
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:1337/api/second-section?populate=*')
+    fetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/second-section?populate=*')
       .then(response => response.json())
       .then(responseData => {
         console.log(responseData);

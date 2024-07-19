@@ -4,7 +4,7 @@ const FirstSection = () => {
   const [data, setData] = useState("");
 
   useEffect(() => {
-    fetch('http://localhost:1337/api/first-section?populate=*')
+    fetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/first-section?populate=*')
       .then(response => response.json())
       .then(responseData => {
         console.log(responseData);
@@ -15,9 +15,9 @@ const FirstSection = () => {
       });
   }, []);
   
-  const product1 = 'http://localhost:1337' + data.slider_img_product1?.data?.attributes?.url;
-  const product2 = 'http://localhost:1337' + data.slider_img_product2?.data?.attributes?.url;
-  const product3 = 'http://localhost:1337' + data.slider_img_product3?.data?.attributes?.url;
+  const product1 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product1?.data?.attributes?.url;
+  const product2 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product2?.data?.attributes?.url;
+  const product3 = 'https://upbeat-card-be7fe087f4.strapiapp.com' + data.slider_img_product3?.data?.attributes?.url;
 
   if (!data) {
     return <div>Chargement...</div>;
