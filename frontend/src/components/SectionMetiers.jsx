@@ -1,10 +1,12 @@
 import { useFetch } from '@/hooks/Api';
-import MetiersList from './metiers/MetiersList';
 import { useEffect, useState } from 'react';
+import './emblaCarrousel/embla.css';
+import EmblaCarousel from './emblaCarrousel/EmblaCarousel';
 
 const SectionMetiers = () => {
-  const { response, error, isLoading } = useFetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/metiers?populate=*');
-  
+  const OPTIONS = { align: 'start' };
+  const SLIDE_COUNT = 10;
+  const { response, error, isLoading } = useFetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/metiers?populate=*&pagination[limit]=10');
   const [data, setData] = useState("");
 
   useEffect(() => {
@@ -19,9 +21,13 @@ const SectionMetiers = () => {
       });
   }, []);
 
-  if (isLoading) return <div>Chargement...</div>;
+  useEffect(() => {
+    console.log(response);
+  }, [response]);
 
+  if (isLoading) return <div>Chargement...</div>;
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
+
   return (
     <>
       <div className="relative bottom-32 w-full">
@@ -32,12 +38,14 @@ const SectionMetiers = () => {
           {data.title_metiers}
         </h2>
         <img src="/flèche-2.svg" alt="" className='flex items-center justify-center mx-auto' style={{paddingRight: '25%'}}/>
-        <MetiersList metiers={response} />
+        {response && response && (
+          <EmblaCarousel slides={response} options={OPTIONS} />
+        )}
       </div>
       <div className="text-black -rotate-6 font-third w-32 items-center justify-center mx-auto">
-      <img src="/arrow-second.svg" alt="" />
+        <img src="/arrow-second.svg" alt="" />
         <span style={{ opacity: "20%" }}>{data.metier_hook}</span>
-        </div>
+      </div>
     </>
   );
 };
