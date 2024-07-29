@@ -24,14 +24,14 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
   }, [emblaApi, onSelect]);
 
   const getSlideClassName = (index) => {
-    if (!emblaApi) return { className: '', distance: Infinity };
+    if (!emblaApi) return { className: "", distance: Infinity };
     const selectedIndex = emblaApi.selectedScrollSnap();
     const distance = Math.abs(selectedIndex - index);
 
-    if (distance === 3) return { className: 'embla__slide--center', distance };
-    if (distance === 1 || distance === 5) return { className: 'embla__slide--near', distance };
-    if (distance === 2 || distance === 4) return { className: 'embla__slide--far', distance };
-    return { className: 'embla__slide--hidden', distance };
+    if (distance === 3) return { className: "embla__slide--center", distance };
+    if (distance === 1 || distance === 5) return { className: "embla__slide--near", distance };
+    if (distance === 2 || distance === 4) return { className: "embla__slide--far", distance };
+    return { className: "embla__slide--hidden", distance };
   };
 
   return (
@@ -39,10 +39,10 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {slides.map((metier, index) => {
-            const { className, distance } = getSlideClassName(index);
+            const { className } = getSlideClassName(index);
             return (
               <div className={`embla__slide ${className}`} key={metier.id}>
-                <MetiersListItem metier={metier} isCenter={distance === 0} />
+                <MetiersListItem metier={metier} />
               </div>
             );
           })}
@@ -56,8 +56,8 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
             <DotButton
               key={index}
               onClick={() => onDotButtonClick(index)}
-              className={'embla__dot'.concat(
-                index === selectedIndex ? ' embla__dot--selected' : ''
+              className={"embla__dot".concat(
+                index === selectedIndex ? " embla__dot--selected" : ""
               )}
             />
           ))}
