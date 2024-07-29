@@ -9,8 +9,8 @@ const SectionLois = () => {
                     <div className='max-w-lg border-2 rounded-lg border-custom-blue p-8'>
                         <h2 className="text-xl text-custom-green font-bold mb-4">Nouveau marquage pour les gobelets carton</h2>
                         <p>
-                            Ce texte impose un marquage à partir du 3 Juillet 2021 (date de la mise en application de la Directive Européenne Single Use Plastics) sur les gobelets en carton ou cellulose au bambou revêtus d'un film plastique.
-                            Il doit être mis en place dans tous les pays Européens. Conformément à la Directive SUP, ce marquage signale : "Le geste de tri, la présence de plastique dans le produit et les effets néfastes sur l'environnement" empêchant le dépôt sauvage ou d'autres moyens d'élimination inappropriés des déchets...
+                            Ce texte impose un marquage &agrave; partir du 3 Juillet 2021 (date de la mise en application de la Directive Europ&eacute;enne Single Use Plastics) sur les gobelets en carton ou cellulose au bambou rev&ecirc;tus d&apos;un film plastique.
+                            Il doit &ecirc;tre mis en place dans tous les pays Europ&eacute;ens. Conform&eacute;ment &agrave; la Directive SUP, ce marquage signale : &quot;Le geste de tri, la pr&eacute;sence de plastique dans le produit et les effets n&eacute;fastes sur l&apos;environnement&quot; emp&ecirc;chant le d&eacute;p&ocirc;t sauvage ou d&apos;autres moyens d&apos;&eacute;limination inappropri&eacute;s des d&eacute;chets...
                         </p>
                         <button className="mt-4 bg-white border-2 text-custom-blue px-4 py-2 rounded" style={{ color: "#5CBDEC", borderColor: "#5CBDEC" }}>Bouton</button>
                     </div>
@@ -18,7 +18,7 @@ const SectionLois = () => {
                 <div className="w-1/2 flex flex-col items-center">
                     <div className="flex justify-center items-center mb-8">
                         <button className="bg-transparent border-2 border-custom-green text-custom-green px-6 py-2 mr-12 rounded-lg">Nom de la loi</button>
-                        <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">Directive Européenne SUP</button>
+                        <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">Directive Europ&eacute;enne SUP</button>
                         <button className="bg-transparent text-custom-green border-2 border-custom-green px-6 py-2 rounded-lg">Nom de la loi</button>
                     </div>
                     <div className="flex justify-center items-center gap-4">
