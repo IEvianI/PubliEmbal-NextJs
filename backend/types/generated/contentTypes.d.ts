@@ -833,6 +833,7 @@ export interface ApiLoiLoi extends Schema.CollectionType {
     singularName: 'loi';
     pluralName: 'lois';
     displayName: 'Lois';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -841,6 +842,11 @@ export interface ApiLoiLoi extends Schema.CollectionType {
     loi_title: Attribute.String;
     loi_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     loi_desc: Attribute.Text;
+    metier: Attribute.Relation<
+      'api::loi.loi',
+      'oneToOne',
+      'api::metier.metier'
+    >;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

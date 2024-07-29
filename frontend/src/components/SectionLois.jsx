@@ -1,21 +1,42 @@
 import React, { useEffect, useState } from 'react';
 
 const SectionLois = () => {
-    const [data, setData] = useState("");
+    const [data, setData] = useState({});
+    const [metierTitle, setMetierTitle] = useState("");
+    const [error, setError] = useState(null);
 
-  useEffect(() => {
-    fetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/lois?populate=*')
-      .then(response => response.json())
-      .then(responseData => {
-        console.log(responseData);
-        setData(responseData.data.attributes);
-      })
-      .catch(error => {
-        console.error('There was an error fetching the data!', error);
-      });
-  }, []);
+    useEffect(() => {
+        fetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/lois?populate=loi_img,metier')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(responseData => {
+                console.log('Response Data:', responseData);
+                if (responseData.data && responseData.data.length > 0) {
+                    const loiData = responseData.data[0].attributes || {};
+                    setData(loiData);
 
-  const imgLoi = data.loi_img?.data?.attributes?.url;
+                    const metierData = loiData.metier?.data?.attributes || {};
+                    console.log('Metier Data:', metierData);
+                    setMetierTitle(metierData.metier_title || '');
+                } else {
+                    setError('No data available');
+                }
+            })
+            .catch(error => {
+                console.error('There was an error fetching the data!', error);
+                setError(error.toString());
+            });
+    }, []);
+
+    if (error) {
+        return <div>Error: {error}</div>;
+    }
+
+    const imgLoi = data.loi_img?.data?.attributes?.url;
     return (
         <div className="pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
             <div className="flex justify-between items-start gap-12">
@@ -29,9 +50,8 @@ const SectionLois = () => {
                 </div>
                 <div className="w-1/2 flex flex-col items-center">
                     <div className="flex justify-center items-center mb-8">
-                        <button className="bg-transparent border-2 border-custom-green text-custom-green px-6 py-2 mr-12 rounded-lg">Nom de la loi</button>
+                        <button className="bg-transparent text-custom-green border-2 border-custom-green px-6 py-2 mr-12 rounded-lg" style={{ backgroundColor: "#FFC107", color: "#fff", borderColor: "#FFC107" }}>{metierTitle || 'Titre non disponible'}</button>
                         <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">{data.loi_title}</button>
-                        <button className="bg-transparent text-custom-green border-2 border-custom-green px-6 py-2 rounded-lg">Nom de la loi</button>
                     </div>
                     <div className="flex justify-center items-center gap-4">
                         <img src={imgLoi} alt="Cups" className="w-1/2" />

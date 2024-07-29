@@ -4,7 +4,8 @@
   "info": {
     "singularName": "loi",
     "pluralName": "lois",
-    "displayName": "Lois"
+    "displayName": "Lois",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,17 +16,23 @@
       "type": "string"
     },
     "loi_img": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "loi_desc": {
       "type": "text"
+    },
+    "metier": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::metier.metier"
     }
   }
 }
