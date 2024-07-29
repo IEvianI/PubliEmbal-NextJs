@@ -27,13 +27,13 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
     if (!emblaApi) return { className: '', distance: Infinity };
     const selectedIndex = emblaApi.selectedScrollSnap();
     const distance = Math.abs(selectedIndex - index);
-  
+
     if (distance === 3) return { className: 'embla__slide--center', distance };
     if (distance === 1 || distance === 5) return { className: 'embla__slide--near', distance };
     if (distance === 2 || distance === 4) return { className: 'embla__slide--far', distance };
     return { className: 'embla__slide--hidden', distance };
   };
-  
+
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -48,7 +48,7 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
           })}
         </div>
       </div>
-  
+
       <div className="embla__controls">
         <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
         <div className="embla__dots">
@@ -65,7 +65,7 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </section>
-  );  
-}  
+  );
+};
 
 export default EmblaCarousel;
