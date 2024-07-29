@@ -1,7 +1,10 @@
 "use client"
 
 import FirstSection from "@/components/FirstSection"
+import SectionApproche from "@/components/SectionApproche"
+import SectionLois from "@/components/SectionLois"
 import SectionMetiers from "@/components/SectionMetiers"
+import SectionServiceClient from "@/components/SectionServiceClient"
 import Image from "next/image"
 
 
@@ -21,6 +24,19 @@ const Homepage = () => {
         <FirstSection />
         </div>
         <SectionMetiers />
+        <div className="relative w-full h-full">
+        <Image src="/fond-section-lois.jpg" layout="fill" 
+        objectFit="cover" 
+        quality={100}
+        alt="Background image"
+        style={{zIndex: -1}}
+         />
+         <SectionLois />
+         </div>
+         <div className="relative w-full h-full">
+         <SectionServiceClient />
+         </div>
+         <SectionApproche />
         </>
     )
 }

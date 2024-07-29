@@ -362,6 +362,109 @@ export interface AdminTransferTokenPermission extends Schema.CollectionType {
   };
 }
 
+export interface ApiFirstSectionFirstSection extends Schema.SingleType {
+  collectionName: 'first_sections';
+  info: {
+    singularName: 'first-section';
+    pluralName: 'first-sections';
+    displayName: 'First-section';
+    description: '';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    slider_baseline: Attribute.String;
+    slider_short_description: Attribute.Text;
+    slider_img_product1: Attribute.Media<'images'>;
+    slider_img_product2: Attribute.Media<'images'>;
+    slider_img_product3: Attribute.Media<'images'>;
+    slider_text_button: Attribute.String;
+    slider_hook_button: Attribute.String;
+    slider_baseline_2: Attribute.String;
+    slider_baseline_3: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::first-section.first-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::first-section.first-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiMetierMetier extends Schema.CollectionType {
+  collectionName: 'metiers';
+  info: {
+    singularName: 'metier';
+    pluralName: 'metiers';
+    displayName: 'Metiers';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    metier_title: Attribute.String;
+    metier_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    metier_color: Attribute.String &
+      Attribute.CustomField<'plugin::color-picker.color'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::metier.metier',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::metier.metier',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSecondSectionSecondSection extends Schema.SingleType {
+  collectionName: 'second_sections';
+  info: {
+    singularName: 'second-section';
+    pluralName: 'second-sections';
+    displayName: 'Second-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_metiers: Attribute.String;
+    metier_hook: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::second-section.second-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::second-section.second-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface PluginUploadFile extends Schema.CollectionType {
   collectionName: 'files';
   info: {
@@ -788,109 +891,6 @@ export interface PluginUsersPermissionsUser extends Schema.CollectionType {
   };
 }
 
-export interface ApiFirstSectionFirstSection extends Schema.SingleType {
-  collectionName: 'first_sections';
-  info: {
-    singularName: 'first-section';
-    pluralName: 'first-sections';
-    displayName: 'First-section';
-    description: '';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    slider_baseline: Attribute.String;
-    slider_short_description: Attribute.Text;
-    slider_img_product1: Attribute.Media<'images'>;
-    slider_img_product2: Attribute.Media<'images'>;
-    slider_img_product3: Attribute.Media<'images'>;
-    slider_text_button: Attribute.String;
-    slider_hook_button: Attribute.String;
-    slider_baseline_2: Attribute.String;
-    slider_baseline_3: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::first-section.first-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::first-section.first-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiMetierMetier extends Schema.CollectionType {
-  collectionName: 'metiers';
-  info: {
-    singularName: 'metier';
-    pluralName: 'metiers';
-    displayName: 'Metiers';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    metier_title: Attribute.String;
-    metier_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    metier_color: Attribute.String &
-      Attribute.CustomField<'plugin::color-picker.color'>;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::metier.metier',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::metier.metier',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
-export interface ApiSecondSectionSecondSection extends Schema.SingleType {
-  collectionName: 'second_sections';
-  info: {
-    singularName: 'second-section';
-    pluralName: 'second-sections';
-    displayName: 'Second-section';
-  };
-  options: {
-    draftAndPublish: true;
-  };
-  attributes: {
-    title_metiers: Attribute.String;
-    metier_hook: Attribute.String;
-    createdAt: Attribute.DateTime;
-    updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
-    createdBy: Attribute.Relation<
-      'api::second-section.second-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-    updatedBy: Attribute.Relation<
-      'api::second-section.second-section',
-      'oneToOne',
-      'admin::user'
-    > &
-      Attribute.Private;
-  };
-}
-
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -901,6 +901,9 @@ declare module '@strapi/types' {
       'admin::api-token-permission': AdminApiTokenPermission;
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
+      'api::first-section.first-section': ApiFirstSectionFirstSection;
+      'api::metier.metier': ApiMetierMetier;
+      'api::second-section.second-section': ApiSecondSectionSecondSection;
       'plugin::upload.file': PluginUploadFile;
       'plugin::upload.folder': PluginUploadFolder;
       'plugin::content-releases.release': PluginContentReleasesRelease;
@@ -909,9 +912,6 @@ declare module '@strapi/types' {
       'plugin::users-permissions.permission': PluginUsersPermissionsPermission;
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
-      'api::first-section.first-section': ApiFirstSectionFirstSection;
-      'api::metier.metier': ApiMetierMetier;
-      'api::second-section.second-section': ApiSecondSectionSecondSection;
     }
   }
 }

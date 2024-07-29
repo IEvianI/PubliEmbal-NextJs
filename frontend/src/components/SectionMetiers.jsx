@@ -4,10 +4,10 @@ import './emblaCarrousel/embla.css';
 import EmblaCarousel from './emblaCarrousel/EmblaCarousel';
 
 const SectionMetiers = () => {
-  const OPTIONS = { align: 'start' };
-  const SLIDE_COUNT = 10;
-  const { response, error, isLoading } = useFetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/metiers?populate=*&pagination[limit]=10');
+  const OPTIONS = { align: 'center' };  // Align center to show central slide prominently
+  const { response, error, isLoading } = useFetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/metiers?populate=*');
   const [data, setData] = useState("");
+  const [currentMetier, setCurrentMetier] = useState({ title: '', color: '' });
 
   useEffect(() => {
     fetch('https://upbeat-card-be7fe087f4.strapiapp.com/api/second-section?populate=*')
@@ -25,6 +25,13 @@ const SectionMetiers = () => {
     console.log(response);
   }, [response]);
 
+  const handleSlideChange = (index) => {
+    if (response && response.data && response.data.length > index) {
+      const current = response.data[index].attributes;
+      setCurrentMetier({ title: current.metier_title, color: current.metier_color });
+    }
+  };
+
   if (isLoading) return <div>Chargement...</div>;
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
@@ -39,8 +46,11 @@ const SectionMetiers = () => {
         </h2>
         <img src="/flèche-2.svg" alt="" className='flex items-center justify-center mx-auto' style={{paddingRight: '25%'}}/>
         {response && response && (
-          <EmblaCarousel slides={response} options={OPTIONS} />
+          <EmblaCarousel slides={response} options={OPTIONS} onSlideChange={handleSlideChange} />
         )}
+      </div>
+      <div className="relative w-full flex items-center justify-center">
+        <span className="background-text">{currentMetier.title}</span>
       </div>
       <div className="text-black -rotate-6 font-third w-32 items-center justify-center mx-auto">
         <img src="/arrow-second.svg" alt="" />
