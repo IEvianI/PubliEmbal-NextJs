@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "lois",
+  "info": {
+    "singularName": "loi",
+    "pluralName": "lois",
+    "displayName": "Lois"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "loi_title": {
+      "type": "string"
+    },
+    "loi_img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "loi_desc": {
+      "type": "text"
+    }
+  }
+}
