@@ -34,7 +34,6 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
     return { className: 'embla__slide--hidden', distance };
   };
   
-
   return (
     <section className="embla">
       <div className="embla__viewport" ref={emblaRef}>
@@ -66,7 +65,7 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
         <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />
       </div>
     </section>
-  );
+  );  
 }  
 
 export default EmblaCarousel;

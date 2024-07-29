@@ -18,7 +18,7 @@ function MetiersListItem({ metier, isCenter }) {
           <img src={imgUrl} className="w-full h-full object-cover rounded-lg z-10" alt={metier_title} style={{ borderBottomRightRadius: '40px' }} />
         </div>
         <div className="absolute bottom-0 flex gap-2 flex-row left-1/2 transform -translate-x-1/2 pl-2.5 z-50 pr-2.5 text-white text-center rounded-lg py-2 text-2xl font-secondary font-extrabold uppercase" style={{ backgroundColor: metier_color }}>
-          {metier_title} <img src="/chevron_metier.svg" alt="" className='pr-3' />
+          {metier_title} <img src="/chevron_metier.svg" alt="" className="pr-3" />
         </div>
       </div>
     </>
