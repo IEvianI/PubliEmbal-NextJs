@@ -1,6 +1,7 @@
 "use client"
 
 import FirstSection from "@/components/FirstSection"
+import Footer from "@/components/Footer"
 import SectionApproche from "@/components/SectionApproche"
 import SectionLois from "@/components/SectionLois"
 import SectionMetiers from "@/components/SectionMetiers"
@@ -37,6 +38,7 @@ const Homepage = () => {
          <SectionServiceClient />
          </div>
          <SectionApproche />
+         <Footer />
         </>
     )
 }

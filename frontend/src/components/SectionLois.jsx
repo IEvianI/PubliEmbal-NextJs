@@ -18,7 +18,7 @@ const SectionLois = () => {
                 console.log('API Response:', responseData);
                 if (responseData.data && responseData.data.length > 0) {
                     setData(responseData.data);
-                    setSelectedLoi(responseData.data[1]); // Sélectionnez par défaut la première loi
+                    setSelectedLoi(responseData.data[0]); // Sélectionnez par défaut la première loi
                 } else {
                     setError('No data available');
                 }
@@ -42,24 +42,26 @@ const SectionLois = () => {
 
     return (
         <div className="pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
-            <div className="flex justify-between max-[767px]:flex max-[767px]:flex-col items-start gap-12">
-                <div className="w-1/2 max-[767px]:w-full pr-4">
-                    <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-center max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8">
+            <div className="flex justify-between items-start gap-12">
+                <div className="w-1/2 pr-4">
+                    <h1 style={{fontWeight: '900'}} className="text-6xl font-secondary text-custom-green font-bold mb-8">
                         VOUS ACCOMPAGNER<br /> AVEC DES GAMMES CONFORMES AUX LOIS
                     </h1>
-                    <div className='max-w-lg max-[767px]:max-w-fit rounded-lg border-angled p-20'>
+                    <div className='max-w-lg rounded-lg border-angled p-8' style={{padding: '30px'}}>
                         <h2 className="text-xl text-custom-green font-bold mb-4">
                             {selectedAttributes.loi_title || 'Nouveau marquage pour les gobelets carton'}
                         </h2>
                         <p>{selectedAttributes.loi_desc}</p>
-                        <button 
-                            className="mt-4 pl-10 pr-10 bg-white border-2 text-custom-blue px-4 py-2 rounded" 
-                            style={{ color: "#5CBDEC", borderColor: "#5CBDEC" }}>
-                            Bouton
-                        </button>
+                        <div className="flex justify-end">
+                            <button 
+                                className="mt-4 pl-10 pr-10 bg-white border-2 text-custom-blue px-4 py-2 rounded" 
+                                style={{ color: "#5CBDEC", borderColor: "#5CBDEC" }}>
+                                Bouton
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div className="w-1/2 max-[767px]:w-full max-[767px]:pt-12 flex flex-col items-center">
+                <div className="w-1/2 flex flex-col items-center">
                     <div className='flex flex-col'>
                         <LoisList lois={data} onLoiClick={handleLoiClick} activeLoiId={selectedLoi?.id} />
                     </div>

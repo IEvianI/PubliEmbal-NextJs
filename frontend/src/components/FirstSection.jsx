@@ -41,8 +41,8 @@ const FirstSection = () => {
           </div>
         </div>
         
-        <div className="flex flex-row mt-8 justify-center items-center mr-60 max-[767px]:mr-0">
-          <a className="text-black -rotate-6 font-third w-32" style={{ opacity: "20%" }}>
+        <div className="flex flex-row mt-8 justify-center items-center mr-96 max-[767px]:mr-0">
+          <a className="text-black -rotate-6 font-third w-60" style={{ opacity: "20%", fontSize: '32px' }}>
             {data.slider_hook_button}
           </a>
           <img src="/arrow.png" alt="arrow" className="pt-12" />
