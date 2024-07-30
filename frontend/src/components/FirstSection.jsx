@@ -26,7 +26,7 @@ const FirstSection = () => {
   return (
     <div className="p-12 text-center relative">
         <div className='mx-0 md:mx-24 lg:mx-96'>
-          <h1 className="font-bold mb-4 font-secondary uppercase text-6xl max-[767px]:text-4xl border-2 p-12 text-custom-green">
+          <h1 className="font-bold mb-4 font-secondary border-angled uppercase text-6xl max-[767px]:text-4xl p-12 text-custom-green">
             <span>{data.slider_baseline}</span><br></br> <span>{data.slider_baseline_3}</span> <span className='font-third font-regular normal-case highlight'>{data.slider_baseline_2}</span>
           </h1>
         </div>

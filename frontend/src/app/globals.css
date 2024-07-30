@@ -130,3 +130,111 @@ body {
   right: 0;
 }
 
+.active-loi .active-loi-title {
+  border: none;
+  position: relative;
+  padding: 20px;
+}
+
+.active-loi .active-loi-title::before,
+.active-loi .active-loi-title::after {
+  content: '';
+  position: absolute;
+  width: 10px; /* Ajustez la taille selon vos besoins */
+  height: 10px; /* Ajustez la taille selon vos besoins */
+  background-color: transparent;
+  border: 2px solid #000; /* Couleur des bordures */
+}
+
+.active-loi .active-loi-title::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+
+.active-loi .active-loi-title::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* styles.css */
+.border-angled {
+  position: relative;
+  padding: 20px;
+}
+
+.border-angled::before,
+.border-angled::after {
+  content: '';
+  position: absolute;
+  width: 20px; /* Ajustez la taille selon vos besoins */
+  height: 20px; /* Ajustez la taille selon vos besoins */
+  background-color: transparent;
+  border: 2px solid #5CBDEC; /* Couleur des bordures */
+}
+
+.border-angled::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.border-angled::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.border-angled::before,
+.border-angled::after,
+.border-angled::before {
+  content: '';
+  position: absolute;
+  width: 20px; /* Ajustez la taille selon vos besoins */
+  height: 20px; /* Ajustez la taille selon vos besoins */
+  background-color: transparent;
+  border: 2px solid #5CBDEC; /* Couleur des bordures */
+}
+
+.border-angled::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.border-angled::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
+
+.border-angled::before,
+.border-angled::after {
+  content: '';
+  position: absolute;
+  width: 20px; /* Ajustez la taille selon vos besoins */
+  height: 20px; /* Ajustez la taille selon vos besoins */
+  background-color: transparent;
+  border: 2px solid #5CBDEC; /* Couleur des bordures */
+}
+
+.border-angled::before {
+  top: -2px;
+  left: -2px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.border-angled::after {
+  bottom: -2px;
+  right: -2px;
+  border-left: none;
+  border-top: none;
+}
