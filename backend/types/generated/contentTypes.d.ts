@@ -896,6 +896,7 @@ export interface ApiSecondSectionSecondSection extends Schema.SingleType {
     singularName: 'second-section';
     pluralName: 'second-sections';
     displayName: 'Second-section';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -903,6 +904,7 @@ export interface ApiSecondSectionSecondSection extends Schema.SingleType {
   attributes: {
     title_metiers: Attribute.String;
     metier_hook: Attribute.String;
+    title_metiers_2: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

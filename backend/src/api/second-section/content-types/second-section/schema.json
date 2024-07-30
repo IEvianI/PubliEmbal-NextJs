@@ -4,7 +4,8 @@
   "info": {
     "singularName": "second-section",
     "pluralName": "second-sections",
-    "displayName": "Second-section"
+    "displayName": "Second-section",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -15,6 +16,9 @@
       "type": "string"
     },
     "metier_hook": {
+      "type": "string"
+    },
+    "title_metiers_2": {
       "type": "string"
     }
   }
