@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 const SectionLois = () => {
     const [data, setData] = useState({});
     const [metierTitle, setMetierTitle] = useState("");
+    const [metierColor, setMetierColor] = useState("");
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -22,6 +23,7 @@ const SectionLois = () => {
                     const metierData = loiData.metier?.data?.attributes || {};
                     console.log('Metier Data:', metierData);
                     setMetierTitle(metierData.metier_title || '');
+                    setMetierColor(metierData.metier_color || '');
                 } else {
                     setError('No data available');
                 }
@@ -49,9 +51,31 @@ const SectionLois = () => {
                     </div>
                 </div>
                 <div className="w-1/2 flex flex-col items-center">
-                    <div className="flex justify-center items-center mb-8">
-                        <button className="bg-transparent text-custom-green border-2 border-custom-green px-6 py-2 mr-12 rounded-lg" style={{ backgroundColor: "#FFC107", color: "#fff", borderColor: "#FFC107" }}>{metierTitle || 'Titre non disponible'}</button>
+                <div className='flex flex-row'>
+                    <div className="flex flex-col justify-center items-center mb-8">
+                        <button 
+                            className="bg-transparent text-custom-green border-2 z-10 justify-center align-center -mb-3 px-2 z mr-12 rounded-lg" 
+                            style={{ backgroundColor: metierColor, color: "#fff", borderColor: metierColor }}>
+                            {metierTitle || 'Titre non disponible'}
+                        </button>
                         <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">{data.loi_title}</button>
+                    </div>
+                    <div className="flex flex-col justify-center items-center mb-8">
+                        <button 
+                            className="bg-transparent text-custom-green border-2 z-10 justify-center align-center -mb-3 px-2 z mr-12 rounded-lg" 
+                            style={{ backgroundColor: metierColor, color: "#fff", borderColor: metierColor }}>
+                            {metierTitle || 'Titre non disponible'}
+                        </button>
+                        <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">{data.loi_title}</button>
+                    </div>
+                    <div className="flex flex-col justify-center items-center mb-8">
+                        <button 
+                            className="bg-transparent text-custom-green border-2 z-10 justify-center align-center -mb-3 px-2 z mr-12 rounded-lg" 
+                            style={{ backgroundColor: metierColor, color: "#fff", borderColor: metierColor }}>
+                            {metierTitle || 'Titre non disponible'}
+                        </button>
+                        <button className="bg-transparent text-custom-green border-2 border-custom-green rounded-lg px-6 mr-12 py-2">{data.loi_title}</button>
+                    </div>
                     </div>
                     <div className="flex justify-center items-center gap-4">
                         <img src={imgLoi} alt="Cups" className="w-1/2" />
