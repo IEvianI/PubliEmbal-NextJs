@@ -1,4 +1,4 @@
-import React, { useEffect, useCallback } from 'react';
+import React, { useEffect, useCallback, useState } from 'react';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 import { PrevButton, NextButton, usePrevNextButtons } from './EmblaCarouselArrowButtons';
 import useEmblaCarousel from 'embla-carousel-react';
@@ -6,19 +6,21 @@ import MetiersListItem from '../metiers/MetiersListItem';
 
 const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
     const [emblaRef, emblaApi] = useEmblaCarousel(options);
+    const [centerIndex, setCenterIndex] = useState(0);
 
-    const { selectedIndex, scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
+    const { scrollSnaps, onDotButtonClick } = useDotButton(emblaApi);
     const { prevBtnDisabled, nextBtnDisabled, onPrevButtonClick, onNextButtonClick } = usePrevNextButtons(emblaApi);
 
     const onSelect = useCallback(() => {
         if (!emblaApi) return;
-        const centerIndex = emblaApi.selectedScrollSnap();
-        onSlideChange(centerIndex);
+        const centerIndex = Math.floor((emblaApi.scrollSnapList().length - 1) / 2);
+        const selectedIndex = emblaApi.selectedScrollSnap();
+        setCenterIndex(selectedIndex);
+        onSlideChange(selectedIndex);
     }, [emblaApi, onSlideChange]);
 
     useEffect(() => {
         if (!emblaApi) return;
-
         onSelect();
         emblaApi.on('reInit', onSelect).on('select', onSelect);
     }, [emblaApi, onSelect]);
@@ -28,8 +30,8 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
             <div className="embla__viewport" ref={emblaRef}>
                 <div className="embla__container">
                     {slides.map((metier, index) => (
-                        <div className={`embla__slide`} key={metier.id}>
-                            <MetiersListItem metier={metier} />
+                        <div className={`embla__slide ${index === centerIndex ? 'embla__slide--center' : ''}`} key={metier.id}>
+                            <MetiersListItem metier={metier} isCenterSlide={index === centerIndex} />
                         </div>
                     ))}
                 </div>
@@ -42,7 +44,7 @@ const EmblaCarousel = ({ slides = [], options, onSlideChange }) => {
                             key={index}
                             onClick={() => onDotButtonClick(index)}
                             className={"embla__dot".concat(
-                                index === selectedIndex ? " embla__dot--selected" : ""
+                                index === centerIndex ? " embla__dot--selected" : ""
                             )}
                         />
                     ))}

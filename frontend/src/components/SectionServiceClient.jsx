@@ -13,10 +13,11 @@ const SectionServiceClient = () => {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>
                     <button className="mt-4 pl-10 pr-10 border-2 bg-white text-custom-blue px-4 py-2 rounded" style={{ color: "#5CBDEC", borderColor: "#5CBDEC" }}>Bouton</button>
-                </div>
+                    <div className='arrow-container-sc'>
+                    <img src="arrow-sc.svg" alt="" className='arrow-image-sc' />
+                    <p className="text-white font-third w-64 italic" style={{fontSize: '32px'}}>On a un super service client !</p>   </div>             </div>
                 <div className="relative w-1/4 text-center" style={{ bottom: "-150px", left: "150px" }}>
                     <img src="AMBIANCE-POTS-MULTIFOOD 1 21.png" alt="Right Image" className="rounded-lg mb-2" />
-                    <p className="text-white italic">On a un super service client !</p>
                 </div>
             </div>
         </div>

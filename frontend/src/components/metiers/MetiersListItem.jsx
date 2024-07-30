@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function MetiersListItem({ metier }) {
+function MetiersListItem({ metier, isCenterSlide }) {
   if (!metier || !metier.attributes) {
     return null;
   }
@@ -10,10 +10,15 @@ function MetiersListItem({ metier }) {
 
   return (
     <div className="relative w-72 h-72 overflow-hidden m-2">
-      <div className="w-full h-full">
-        <img src={imgUrl} className="w-full h-full object-cover rounded-lg z-10" alt={metier_title} style={{ borderBottomRightRadius: '40px' }} />
+      {isCenterSlide && (
+        <div className="-top-12 w-full text-center text-3xl font-bold" style={{ color: metier_color }}>
+          {metier_title}
+        </div>
+      )}
+      <div className="w-full h-full relative z-10">
+        <img src={imgUrl} className="w-full h-full object-cover rounded-lg" alt={metier_title} style={{ borderBottomRightRadius: '40px' }} />
       </div>
-      <div className="absolute bottom-0 flex gap-2 flex-row left-1/2 transform -translate-x-1/2 pl-2.5 z-50 pr-2.5 text-white text-center rounded-lg py-2 text-2xl font-secondary font-extrabold uppercase" style={{ backgroundColor: metier_color }}>
+      <div className="absolute bottom-0 flex gap-2 flex-row left-1/2 transform -translate-x-1/2 pl-2.5 z-20 pr-2.5 text-white text-center rounded-lg py-2 text-2xl font-secondary font-extrabold uppercase" style={{ backgroundColor: metier_color }}>
         {metier_title} <img src="/chevron_metier.svg" alt="" className='pr-3' />
       </div>
     </div>
@@ -22,6 +27,7 @@ function MetiersListItem({ metier }) {
 
 MetiersListItem.propTypes = {
   metier: PropTypes.object.isRequired,
+  isCenterSlide: PropTypes.bool.isRequired,
 };
 
 export default MetiersListItem;

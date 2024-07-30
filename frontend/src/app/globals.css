@@ -248,10 +248,26 @@ body {
   left: 20%; /* Ajustez cette valeur pour contrôler la distance verticale */
 }
 
+.arrow-container-sc {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 10px;
+  left: 32%; /* Ajustez cette valeur pour contrôler la distance verticale */
+}
+
 .arrow-image {
   position: absolute;
   top: 0px; 
   left: 50%; 
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.arrow-image-sc {
+  position: absolute;
+  top: -75px; 
   transform: translateX(-50%);
   z-index: 10;
 }

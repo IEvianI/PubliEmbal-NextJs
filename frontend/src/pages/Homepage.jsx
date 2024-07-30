@@ -4,6 +4,7 @@ import FirstSection from "@/components/FirstSection"
 import Footer from "@/components/Footer"
 import SectionApproche from "@/components/SectionApproche"
 import SectionLois from "@/components/SectionLois"
+import SectionNouveautes from "@/components/SectionNouveautes"
 import SectionMetiers from "@/components/SectionMetiers"
 import SectionServiceClient from "@/components/SectionServiceClient"
 import Image from "next/image"
@@ -38,6 +39,7 @@ const Homepage = () => {
          <SectionServiceClient />
          </div>
          <SectionApproche />
+         <SectionNouveautes />
          <Footer />
         </>
     )

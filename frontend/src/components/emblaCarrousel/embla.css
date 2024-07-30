@@ -1,4 +1,3 @@
-/* embla.css */
 .embla {
   max-width: 110rem;
   margin: auto;
@@ -56,26 +55,11 @@
   }
 }
 
-.embla__slide--center {
-  transform: scale(1);
-  z-index: 3;
-  opacity: 1;
-}
-
-.embla__slide--near {
-  transform: scale(0.8);
-  z-index: 2;
-  opacity: 0.6;
-}
-
-.embla__slide--far {
-  transform: scale(0.9);
-  z-index: 1;
-  opacity: 0.8;
-}
-
-.embla__slide--hidden {
-  display: none;
+.embla__slide--center .absolute.top-0 {
+  display: block;
+  text-align: center;
+  width: 100%;
+  top: -2rem;
 }
 
 .embla__controls {
@@ -165,4 +149,12 @@
 
 .accordeon-custom {
   border-radius: 8px 8px 40px 8px;
+}
+
+.accordeon-custom:active {
+  border-radius: 8px 8px 0px 8px;
+}
+
+.accordeon-custom:focus {
+  border-radius: 8px 8px 0px 0px;
 }
