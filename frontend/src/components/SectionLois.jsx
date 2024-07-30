@@ -42,12 +42,12 @@ const SectionLois = () => {
 
     return (
         <div className="pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
-            <div className="flex justify-between items-start gap-12">
-                <div className="w-1/2 pr-4">
-                    <h1 className="text-6xl font-secondary text-custom-green font-bold mb-8">
+            <div className="flex justify-between max-[767px]:flex max-[767px]:flex-col items-start gap-12">
+                <div className="w-1/2 max-[767px]:w-full pr-4">
+                    <h1 className="text-6xl max-[767px]:text-center max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8">
                         VOUS ACCOMPAGNER<br /> AVEC DES GAMMES CONFORMES AUX LOIS
                     </h1>
-                    <div className='max-w-lg rounded-lg border-angled p-20'>
+                    <div className='max-w-lg max-[767px]:max-w-fit rounded-lg border-angled p-20'>
                         <h2 className="text-xl text-custom-green font-bold mb-4">
                             {selectedAttributes.loi_title || 'Nouveau marquage pour les gobelets carton'}
                         </h2>
@@ -59,7 +59,7 @@ const SectionLois = () => {
                         </button>
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col items-center">
+                <div className="w-1/2 max-[767px]:w-full max-[767px]:pt-12 flex flex-col items-center">
                     <div className='flex flex-col'>
                         <LoisList lois={data} onLoiClick={handleLoiClick} activeLoiId={selectedLoi?.id} />
                     </div>
