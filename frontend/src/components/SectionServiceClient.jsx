@@ -8,7 +8,7 @@ const SectionServiceClient = () => {
                     <img src="AMBIANCE-POTS-MULTIFOOD 1 20.png" alt="Left Image" className="rounded-lg" />
                 </div>
                 <div className="w-1/2 text-center text-white">
-                    <h1 className="text-6xl max-[767px]:text-4xl font-secondary font-bold mb-4">VOUS APPORTER<br></br> DES REPONSES</h1>
+                    <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-4xl font-secondary font-bold mb-4">VOUS APPORTER<br></br> DES REPONSES</h1>
                     <p className="mb-4">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                     </p>

@@ -6,7 +6,7 @@ const SectionApproche = () => {
     return (
         <div className="w-full bg-white py-20 px-8">
             <div className='flex justify-center text-center'>
-            <h1 className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">VOUS EXPLIQUER<br /> NOTRE APPROCHE</h1>
+            <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">VOUS EXPLIQUER<br /> NOTRE APPROCHE</h1>
             </div>
             <div className="flex max-[767px]:flex-col justify-between items-start">
                 <div className="w-1/2 max-[767px]:w-full">

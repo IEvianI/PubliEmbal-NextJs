@@ -44,7 +44,7 @@ const SectionLois = () => {
         <div className="pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
             <div className="flex justify-between max-[767px]:flex max-[767px]:flex-col items-start gap-12">
                 <div className="w-1/2 max-[767px]:w-full pr-4">
-                    <h1 className="text-6xl max-[767px]:text-center max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8">
+                    <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-center max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8">
                         VOUS ACCOMPAGNER<br /> AVEC DES GAMMES CONFORMES AUX LOIS
                     </h1>
                     <div className='max-w-lg max-[767px]:max-w-fit rounded-lg border-angled p-20'>

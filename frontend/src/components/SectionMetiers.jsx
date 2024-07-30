@@ -41,7 +41,7 @@ const SectionMetiers = () => {
         <img src="/gobelet.png" alt="Gobelet" className="absolute top-0 right-0 max-[767px]:w-36 max-[767px]:top-10" />
       </div>
       <div className='w-full pt-14 pb-14'>
-        <h2 className='flex font-secondary font-light max-[767px]:text-4xl text-center text-custom-green uppercase text-6xl mb-16 items-center mx-0 md:mx-24 lg:mx-96 justify-center mx-auto'>
+        <h2 style={{fontWeight: '900'}} className='flex font-secondary max-[767px]:text-4xl text-center text-custom-green uppercase text-6xl mb-16 items-center mx-0 md:mx-24 lg:mx-96 justify-center mx-auto'>
           {data.title_metiers} <br></br>{data.title_metiers_2}
         </h2>
         <img src="/flèche-2.svg" alt="" className='flex items-center justify-center mx-auto' style={{paddingRight: '25%'}}/>
