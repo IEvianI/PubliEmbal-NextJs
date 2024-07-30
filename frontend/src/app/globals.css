@@ -238,3 +238,31 @@ body {
   border-left: none;
   border-top: none;
 }
+
+.arrow-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -135px;
+  left: 20%; /* Ajustez cette valeur pour contrôler la distance verticale */
+}
+
+.arrow-image {
+  position: absolute;
+  top: 0px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.arrow-text {
+  position: absolute;
+  font-size: 32px;
+  top: 80px; 
+  left: 50%; 
+  transform: translateX(-50%);
+  z-index: 5;
+  text-align: center;
+  width: 200%;
+}
