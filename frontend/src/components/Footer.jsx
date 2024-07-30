@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="bg-custom-green text-white py-12">
             <div className="flex flex-row container justify-center mx-auto md:grid-cols-4 gap-72">
                 <div>
-                    <h3 className="text-lg font-bold mb-4">Nos solutions d'emballages</h3>
+                    <h3 className="text-lg font-bold mb-4">Nos solutions d&apos;emballages</h3>
                     <div className='flex gap-12 flex-row'>
                     <ul className="space-y-2 flex flex-col">
                         <li>Nos incontournables</li>
