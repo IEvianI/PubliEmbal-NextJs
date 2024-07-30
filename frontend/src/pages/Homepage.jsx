@@ -39,7 +39,15 @@ const Homepage = () => {
          <SectionServiceClient />
          </div>
          <SectionApproche />
+         <div className="relative w-full h-full">
+        <Image src="/fond-section-news.png" layout="fill" 
+        objectFit="cover" 
+        quality={100}
+        alt="Background image"
+        style={{zIndex: -1}}
+         />
          <SectionNouveautes />
+         </div>
          <Footer />
         </>
     )
