@@ -43,15 +43,15 @@ const SectionNouveautes = () => {
                     <div className="border-2 border-custom-blue p-4 rounded-lg">
                         {activeTab === 'produits' && (
                             <div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-1-new.png" alt="Produit 1" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-2-new.png" alt="Produit 2" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-3-new.png" alt="Produit 3" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
@@ -59,15 +59,15 @@ const SectionNouveautes = () => {
                         )}
                         {activeTab === 'promotions' && (
                             <div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-3-new.png" alt="Promotion 1" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Promo 1: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-1-new.png" alt="Promotion 2" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Promo 2: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="flex mb-4">
+                                <div className="text-custom-green flex mb-4">
                                     <img src="product-2-new.png" alt="Promotion 3" className="w-32 h-24 rounded-lg mr-4" />
                                     <p>Promo 3: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>

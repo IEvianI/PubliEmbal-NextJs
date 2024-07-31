@@ -25,12 +25,12 @@ const MobileMenu = () => {
                 )}
             </div>
             {isOpen && (
-                <div className="absolute left-0 top-24 w-full h-[calc(100vh-96px)] bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
-                    <Link href="/" onClick={() => setIsOpen(false)}>{`Nos solutions d'emballages`}</Link>
-                    <Link href="/" onClick={() => setIsOpen(false)}>Nos services</Link>
-                    <Link href="/" onClick={() => setIsOpen(false)}>Notre société</Link>
-                    <Link href="/" onClick={() => setIsOpen(false)}>Nos engagements</Link>
-                    <Link href="/" onClick={() => setIsOpen(false)}>Nos actualités</Link>
+                <div className="absolute left-0 top-24 w-full h-96 bg-white flex flex-col items-center justify-center gap-8 font-medium text-xl z-10">
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-custom-green font-primary">{`Nos solutions d'emballages`}</Link>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-custom-green font-primary">Nos services</Link>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-custom-green font-primary">Notre société</Link>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-custom-green font-primary">Nos engagements</Link>
+                    <Link href="/" onClick={() => setIsOpen(false)} className="text-custom-green font-primary">Nos actualités</Link>
                 </div>
             )}
         </div>

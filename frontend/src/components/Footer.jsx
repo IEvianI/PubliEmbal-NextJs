@@ -4,10 +4,10 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="bg-custom-green text-white py-12">
-            <div className="flex flex-row max-[767px]:flex max-[767px]:flex-col max-[767px]:justify-center max-[767px]:items-center max-[767px]:gap-24 container justify-center mx-auto max md:grid-cols-4 gap-72">
+            <div className="flex flex-row max-[767px]:flex max-[767px]:flex-col max-[767px]:text-center max-[767px]:justify-center max-[767px]:items-center max-[767px]:gap-16 container justify-center mx-auto max md:grid-cols-4 gap-72">
                 <div>
                     <h3 className="text-lg font-bold mb-4">Nos solutions d&apos;emballages</h3>
-                    <div className='flex gap-12 flex-row'>
+                    <div className='flex gap-12 max-[767px]:gap-2 max-[767px]:flex-col flex-row'>
                     <ul className="space-y-2 flex flex-col">
                         <li>Nos incontournables</li>
                         <li>Boucherie Charcuterie</li>
