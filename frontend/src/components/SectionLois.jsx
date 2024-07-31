@@ -18,7 +18,7 @@ const SectionLois = () => {
                 console.log('API Response:', responseData);
                 if (responseData.data && responseData.data.length > 0) {
                     setData(responseData.data);
-                    setSelectedLoi(responseData.data[0]); // Sélectionnez par défaut la première loi
+                    setSelectedLoi(responseData.data[1]);
                 } else {
                     setError('No data available');
                 }
