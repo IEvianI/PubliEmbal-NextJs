@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@headlessui/react": "^2.1.2",
+    "@splidejs/react-splide": "^0.7.12",
     "axios": "^1.7.2",
     "embla-carousel": "^8.1.7",
     "embla-carousel-react": "^8.1.7",

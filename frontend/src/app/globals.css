@@ -244,7 +244,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  top: -135px;
+  top: -40px;
   left: 20%; /* Ajustez cette valeur pour contrôler la distance verticale */
 }
 

@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 
-function MetiersListItem({ metier, isCenterSlide }) {
+function MetiersListItem({ metier }) {
   if (!metier || !metier.attributes) {
     return null;
   }
@@ -10,11 +10,6 @@ function MetiersListItem({ metier, isCenterSlide }) {
 
   return (
     <div className="relative w-72 h-72 overflow-hidden m-2">
-      {isCenterSlide && (
-        <div className="-top-12 w-full text-center text-3xl font-bold" style={{ color: metier_color }}>
-          {metier_title}
-        </div>
-      )}
       <div className="w-full h-full relative z-10">
         <img src={imgUrl} className="w-full h-full object-cover rounded-lg" alt={metier_title} style={{ borderBottomRightRadius: '40px' }} />
       </div>
@@ -27,7 +22,6 @@ function MetiersListItem({ metier, isCenterSlide }) {
 
 MetiersListItem.propTypes = {
   metier: PropTypes.object.isRequired,
-  isCenterSlide: PropTypes.bool.isRequired,
 };
 
 export default MetiersListItem;
