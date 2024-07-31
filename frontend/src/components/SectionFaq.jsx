@@ -16,7 +16,7 @@ const SectionFaq = () => {
                 <h2 className="text-6xl font-bold text-custom-green -mb-24 font-secondary text-center" style={{fontWeight: '900'}}>CECI EST UN TITRE<br></br> POUR LE SEO</h2>
                 <img src="arrow-faq.svg" alt="" style={{transform: 'translateY(2rem) translateX(26rem)'}} />
                 <div className="flex justify-between items-center mb-8">
-                    <img src="Pot VR_Photo + dessin.png" alt="Left Image" className="hidden md:block" style={{transform: 'translateX(10rem)'}} />
+                    <img src="pot-2-faq.png" alt="Left Image" className="hidden md:block" style={{transform: 'translateX(10rem)'}} />
                     <div className="w-full">
                         {faqs.map((faq, index) => (
                             <Disclosure key={index}>
