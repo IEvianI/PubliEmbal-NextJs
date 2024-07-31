@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "matieres",
+  "info": {
+    "singularName": "matiere",
+    "pluralName": "matieres",
+    "displayName": "Matieres"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "matiere_title": {
+      "type": "string"
+    },
+    "matiere_img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

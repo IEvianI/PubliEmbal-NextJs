@@ -857,6 +857,37 @@ export interface ApiLoiLoi extends Schema.CollectionType {
   };
 }
 
+export interface ApiMatiereMatiere extends Schema.CollectionType {
+  collectionName: 'matieres';
+  info: {
+    singularName: 'matiere';
+    pluralName: 'matieres';
+    displayName: 'Matieres';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    matiere_title: Attribute.String;
+    matiere_img: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::matiere.matiere',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::matiere.matiere',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiMetierMetier extends Schema.CollectionType {
   collectionName: 'metiers';
   info: {
@@ -943,6 +974,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::first-section.first-section': ApiFirstSectionFirstSection;
       'api::loi.loi': ApiLoiLoi;
+      'api::matiere.matiere': ApiMatiereMatiere;
       'api::metier.metier': ApiMetierMetier;
       'api::second-section.second-section': ApiSecondSectionSecondSection;
     }
