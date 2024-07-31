@@ -8,7 +8,7 @@ const SectionNouveautes = () => {
         <div className="relative bottom-32 w-full">
                 <img src="Gobelets Dessin PUB 3.png" alt="Gobelet" className="absolute -top-10 left-20 max-[767px]:w-36 max-[767px]:top-10" />
             </div>
-        <div className="w-11/12 justify-center items-center mx-auto py-20 px-8">
+        <div className="w-11/12 justify-center items-center mx-auto py-20 pb-32 px-8">
             <div className="flex justify-center text-center">
                 <h1 style={{ fontWeight: '900' }} className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">
                     VOUS FAIRE DECOUVRIR<br /> NOS NOUVEAUTES

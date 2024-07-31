@@ -8,6 +8,8 @@ import SectionNouveautes from "@/components/SectionNouveautes"
 import SectionMetiers from "@/components/SectionMetiers"
 import SectionServiceClient from "@/components/SectionServiceClient"
 import Image from "next/image"
+import SectionMatieres from "@/components/SectionMatieres"
+import SectionFaq from "@/components/SectionFaq"
 
 
 const { default: Navbar } = require("@/components/Navbar")
@@ -48,6 +50,16 @@ const Homepage = () => {
          />
          <SectionNouveautes />
          </div>
+         <div className="relative w-full h-full">
+        <Image src="/fond-section-matieres.png" layout="fill" 
+        objectFit="cover" 
+        quality={100}
+        alt="Background image"
+        style={{zIndex: -1}}
+         />
+         <SectionMatieres />
+         </div>
+         <SectionFaq />
          <Footer />
         </>
     )

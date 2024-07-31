@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
-import MatieresListItem from './MatieresListItem';
+import MatieresListItem from './matieres/MatieresListItem';
 
 const SectionMatieres = () => {
   const [matieres, setMatieres] = useState([]);
@@ -23,6 +23,7 @@ const SectionMatieres = () => {
     gap: '1rem',
     pagination: true,
     arrows: true,
+    padding: '20%',
     breakpoints: {
       768: {
         perPage: 1,
@@ -34,8 +35,12 @@ const SectionMatieres = () => {
   };
 
   return (
-    <section className="section-matieres py-16">
-      <h2 className="text-4xl font-bold text-center mb-8">ENSEMBLE, ADOPTONS LES GESTES RESPONSABLES !</h2>
+    <>
+    <div className="relative bottom-32 w-full">
+                <img src="gobelet-matieres.png" alt="Gobelet" className="absolute left-20 max-[767px]:w-36 max-[767px]:top-10" />
+            </div>
+    <section className="section-matieres py-20">
+      <h2 className="text-6xl text-custom-green font-secondary text-center mb-20" style={{ fontWeight: '900' }}>ENSEMBLE, ADOPTONS<br></br> LES GESTES RESPONSABLES !</h2>
       <Splide options={options}>
         {matieres.map((matiere) => (
           <SplideSlide key={matiere.id}>
@@ -43,10 +48,11 @@ const SectionMatieres = () => {
           </SplideSlide>
         ))}
       </Splide>
-      <div className="text-center mt-8">
-        <button className="px-8 py-4 bg-blue-500 text-white rounded">CTA</button>
+      <div className="text-center mt-20">
+        <button className="pl-10 pr-10 py-2 bg-custom-blue text-white rounded">CTA</button>
       </div>
     </section>
+    </>
   );
 };
 
