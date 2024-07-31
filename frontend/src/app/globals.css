@@ -283,3 +283,7 @@ body {
   width: 200%;
 }
 
+.max-w-carousel {
+  max-width: 80%;
+  margin: 0 auto;
+}

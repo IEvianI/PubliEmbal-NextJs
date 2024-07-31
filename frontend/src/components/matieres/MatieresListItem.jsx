@@ -11,10 +11,10 @@ const MatieresListItem = ({ matiere }) => {
   
 
   return (
-    <div className="relative w-72 h-72 overflow-hidden rounded-lg">
+    <div className="relative w-96 h-96 overflow-hidden rounded-lg">
       <img src={matiereImg} className="w-full h-full object-cover" alt={matiere_title} />
       <div className="absolute inset-0 flex items-center justify-center">
-        <h3 className="text-white text-2xl font-bold uppercase">{matiere_title}</h3>
+        <h3 className="text-white text-6xl font-secondary uppercase" style={{fontWeight: '900', textShadow: '0px 4px 4px rgba(0, 0, 0, 0.25)'}}>{matiere_title}</h3>
       </div>
     </div>
   );
