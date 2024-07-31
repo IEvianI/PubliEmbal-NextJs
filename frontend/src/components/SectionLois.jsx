@@ -41,10 +41,10 @@ const SectionLois = () => {
     const imgLoi = selectedAttributes.loi_img?.data?.attributes?.url;
 
     return (
-        <div className="pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
-            <div className="flex justify-between items-start gap-12">
-                <div className="w-1/2 pr-4">
-                    <h1 style={{fontWeight: '900'}} className="text-6xl font-secondary text-custom-green font-bold mb-8">
+        <div className="mobile-section-loi pl-12 pr-12" style={{ paddingTop: "165px", paddingBottom: "165px" }}>
+            <div className="flex max-[767px]:flex-col justify-between items-start gap-12">
+                <div className="w-1/2 max-[767px]:w-full pr-4">
+                    <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8">
                         VOUS ACCOMPAGNER<br /> AVEC DES GAMMES CONFORMES AUX LOIS
                     </h1>
                     <div className='max-w-lg rounded-lg border-angled p-8' style={{padding: '30px'}}>
@@ -61,7 +61,7 @@ const SectionLois = () => {
                         </div>
                     </div>
                 </div>
-                <div className="w-1/2 flex flex-col items-center">
+                <div className="w-1/2 max-[767px]:w-full flex flex-col items-center">
                     <div className='flex flex-col'>
                         <LoisList lois={data} onLoiClick={handleLoiClick} activeLoiId={selectedLoi?.id} />
                     </div>

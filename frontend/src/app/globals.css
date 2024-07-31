@@ -287,3 +287,33 @@ body {
   max-width: 80%;
   margin: 0 auto;
 }
+
+
+@media screen and (max-width: 768px) {
+  .mobile-section-loi {
+    padding-top: 75px !important;
+    padding-bottom: 75px !important;
+  }
+  .mobile-section-sc {
+    height: 700px !important;
+  }
+  .image-mobile-sc {
+    left: -0px !important;
+    bottom: -125px !important;
+  }
+  .arrow-faq-mobile {
+    transform: translateX(-2rem) !important;
+  }
+  .arrow-image {
+    left: 0% !important;
+    transform: translateX(25px) !important;
+  }
+  .arrow-text {
+    left: 0% !important; 
+  transform: translateX(-50%) !important;
+  }
+  .title-metier-mobile {
+    font-size: 50px !important;
+  }
+}
+

@@ -40,7 +40,7 @@ const SplideCarousel = ({ slides }) => {
         <div className="outline-4 absolute w-full text-center font-secondary uppercase" style={{ top: '-26.5rem', right: '2rem', zIndex: '-1' }}>
           {slides[centerIndex] && (
             <h2
-              className="text-3xl justify-center mx-auto items-center font-bold"
+              className="title-metier-mobile text-3xl justify-center mx-auto items-center font-bold"
               style={{
                 fontSize: '75px',
                 lineHeight: '1',

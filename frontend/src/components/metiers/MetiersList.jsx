@@ -10,8 +10,6 @@ function MetiersList({ metiers }) {
     return null;
   }
 
-  const { metier_title, metier_color } = metier.attributes;
-
   return (
     <div className="flex flex-col md:flex-row items-center justify-center">
       {metiers.map(metier => (

@@ -13,8 +13,8 @@ const SectionFaq = () => {
     return (
         <section className="section-faq py-20">
             <div className="w-11/12 mx-auto px-4">
-                <h2 className="text-6xl font-bold text-custom-green -mb-24 font-secondary text-center" style={{fontWeight: '900'}}>CECI EST UN TITRE<br></br> POUR LE SEO</h2>
-                <img src="arrow-faq.svg" alt="" style={{transform: 'translateY(2rem) translateX(26rem)'}} />
+                <h2 className="text-6xl font-bold text-custom-green -mb-24 max-[767px]:text-4xl font-secondary text-center" style={{fontWeight: '900'}}>CECI EST UN TITRE<br></br> POUR LE SEO</h2>
+                <img src="arrow-faq.svg" className='arrow-faq-mobile' alt="" style={{transform: 'translateY(2rem) translateX(26rem)'}} />
                 <div className="flex justify-between items-center mb-8">
                     <img src="pot-2-faq.png" alt="Left Image" className="hidden md:block" style={{transform: 'translateX(10rem)'}} />
                     <div className="w-full">
@@ -22,7 +22,7 @@ const SectionFaq = () => {
                             <Disclosure key={index}>
                                 {({ open }) => (
                                     <>
-                                        <DisclosureButton className="flex justify-between w-full px-12 py-4 text-3xl font-primary font-bold text-left text-custom-green bg-white border-2 border-custom-green rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 mb-4">
+                                        <DisclosureButton className="flex justify-between max-[767px]:px-6 max-[767px]:text-2xl w-full px-12 py-4 text-3xl font-primary font-bold text-left text-custom-green bg-white border-2 border-custom-green rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 mb-4">
                                             <span>{faq.question}</span>
                                             <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-custom-green`} />
                                         </DisclosureButton>

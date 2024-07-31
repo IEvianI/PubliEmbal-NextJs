@@ -4,7 +4,7 @@ import React from 'react';
 const Footer = () => {
     return (
         <footer className="bg-custom-green text-white py-12">
-            <div className="flex flex-row container justify-center mx-auto md:grid-cols-4 gap-72">
+            <div className="flex flex-row max-[767px]:flex max-[767px]:flex-col max-[767px]:justify-center max-[767px]:items-center max-[767px]:gap-24 container justify-center mx-auto max md:grid-cols-4 gap-72">
                 <div>
                     <h3 className="text-lg font-bold mb-4">Nos solutions d&apos;emballages</h3>
                     <div className='flex gap-12 flex-row'>
@@ -41,8 +41,8 @@ const Footer = () => {
                     </ul>
                 </div>
             </div>
-            <div className="bg-white ml-32 mr-32 rounded-lg text-black py-6 mt-8 flex justify-between items-center px-12">
-            <div className="flex items-center">
+            <div className="bg-white ml-32 mr-32 max-[767px]:gap-8 max-[767px]:flex max-[767px]:flex-col max-[767px]:w-full max-[767px]:ml-0 rounded-lg text-black py-6 mt-8 flex justify-between items-center px-12">
+            <div className="flex max-[767px]:flex-col items-center">
                         <img src="logo-pub.svg" alt="Publi Embal" className="h-12 mr-4" />
                         <div>
                             <p className="font-bold">Publi Embal</p>

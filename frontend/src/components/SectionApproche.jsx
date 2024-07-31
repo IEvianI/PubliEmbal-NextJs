@@ -4,7 +4,7 @@ import ChevronUp from './assets/ChevronUp';
 
 const SectionApproche = () => {
     return (
-        <div className="w-full bg-white py-20 pl-8">
+        <div className="w-full bg-white max-[767px]:pl-4 max-[767px]:pr-4 py-20 max-[767px]:pb-0 pl-8">
             <div className='flex justify-center text-center'>
                 <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">VOUS EXPLIQUER<br /> NOTRE APPROCHE</h1>
             </div>
@@ -67,9 +67,9 @@ const SectionApproche = () => {
                 </div>
                 <div className="w-1/2 max-[767px]:w-full max-[767px]:pl-0 max-[767px]:mt-16 pl-8">
                     <img src="Engagements - Image.png" alt="Approach" className="rounded-lg" style={{borderTopRightRadius: '0px', borderBottomRightRadius: '0px', borderBottomLeftRadius: '40px'}} />
-                    <div className='ml-96 mt-4'>
+                    <div className='max-[767px]:ml-8 ml-96 mt-4'>
                     <img src="arrow-approche.svg" alt="" />
-                    <p className='font-third' style={{fontSize: '32px', opacity: '20%'}}>Ceci est notre approche</p>
+                    <p className='font-third max-[767px]:mb-36 ' style={{fontSize: '32px', opacity: '20%'}}>Ceci est notre approche</p>
                     </div>
                 </div>
             </div>
