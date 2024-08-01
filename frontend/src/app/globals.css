@@ -317,3 +317,44 @@ body {
   }
 }
 
+.splide__arrow--prev,
+.splide__arrow--next {
+  background-color: #fff !important; 
+  border-radius: 50% !important;     
+  width: 48px !important;         
+  height: 48px !important;      
+  border: none !important;          
+}
+
+.splide__arrow--prev svg,
+.splide__arrow--next svg {
+  stroke: #6ac8f2 !important;
+  stroke-width: 3px !important;
+  fill: transparent !important;
+  width: 100px !important;
+}
+
+.splide__arrows {
+  stroke: #6ac8f2 3px !important;
+  width: 100px !important;
+}
+
+.splide__arrow svg {
+  width: 45px !important;
+  height: 45px !important;
+  overflow: visible !important;
+}
+
+
+.splide__arrow {
+  background: transparent !important;
+}
+
+.splide__pagination__page.is-active {
+  background: #5CBDEC !important;
+  opacity: 100% !important;
+}
+
+.splide__pagination {
+  bottom: -3rem !important;
+}
