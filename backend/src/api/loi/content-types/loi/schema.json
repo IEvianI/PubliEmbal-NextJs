@@ -33,6 +33,12 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::metier.metier"
+    },
+    "loi_title_desc_1": {
+      "type": "string"
+    },
+    "loi_title_desc_2": {
+      "type": "string"
     }
   }
 }

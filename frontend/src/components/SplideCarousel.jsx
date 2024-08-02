@@ -35,7 +35,7 @@ const SplideCarousel = ({ slides }) => {
     }
   };
 
-  // Toujours appeler useEffect indépendamment des conditions
+
   useEffect(() => {
     const splide = splideRef.current.splide;
     splide.on('moved', handleMove);
@@ -47,10 +47,10 @@ const SplideCarousel = ({ slides }) => {
     };
   }, [slides]);
 
-  // Vérifier la validité des slides après la déclaration des hooks
+
   if (!Array.isArray(slides) || slides.length === 0) {
     console.error('Invalid slides prop:', slides);
-    return <div>Chargement des diapositives...</div>; // Afficher un message d'attente ou d'erreur
+    return <div>Chargement des diapositives...</div>;
   }
 
   return (

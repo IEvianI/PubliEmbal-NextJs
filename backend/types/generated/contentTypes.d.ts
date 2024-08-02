@@ -847,6 +847,8 @@ export interface ApiLoiLoi extends Schema.CollectionType {
       'oneToOne',
       'api::metier.metier'
     >;
+    loi_title_desc_1: Attribute.String;
+    loi_title_desc_2: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
