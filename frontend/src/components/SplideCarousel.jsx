@@ -1,10 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/dist/css/splide.min.css';
 import MetiersListItem from './metiers/MetiersListItem';
 
 const SplideCarousel = ({ slides }) => {
   const [centerIndex, setCenterIndex] = useState(0);
+  const splideRef = useRef();
+
+  if (!Array.isArray(slides) || slides.length === 0) {
+    console.error('Invalid slides prop:', slides);
+    return <div>Chargement des diapositives...</div>;  // Afficher un message d'attente ou d'erreur
+  }
 
   const options = {
     type: 'loop',
@@ -19,19 +25,35 @@ const SplideCarousel = ({ slides }) => {
         perPage: 1,
       },
       1024: {
-        perPage: 2,
+        perPage: 3,
       },
+      1400: {
+        perPage: 4,
+      }
     },
   };
 
-
-  const handleMove = (splide, newIndex) => {
-    setCenterIndex(newIndex);
+  const handleMove = () => {
+    if (splideRef.current) {
+      const realIndex = splideRef.current.splide.index % slides.length;
+      setCenterIndex(realIndex);
+    }
   };
+
+  useEffect(() => {
+    const splide = splideRef.current.splide;
+    splide.on('moved', handleMove);
+    splide.on('updated', handleMove);
+
+    return () => {
+      splide.off('moved', handleMove);
+      splide.off('updated', handleMove);
+    };
+  }, [slides]);
 
   return (
     <div className="relative">
-      <Splide options={options} onMoved={handleMove}>
+      <Splide ref={splideRef} options={options}>
         {slides.map((metier, index) => (
           <SplideSlide key={metier.id}>
             <MetiersListItem metier={metier} isCenterSlide={index === centerIndex} />
@@ -39,7 +61,7 @@ const SplideCarousel = ({ slides }) => {
         ))}
       </Splide>
       <div className="relative">
-        <div className="outline-4 absolute w-full text-center font-secondary uppercase" style={{ top: '-26.5rem', right: '2rem', zIndex: '-1' }}>
+        <div className="outline-4 absolute w-full text-center font-secondary uppercase" style={{ top: '-28.5rem', right: '2rem', zIndex: '-1' }}>
           {slides[centerIndex] && (
             <h2
               className="title-metier-mobile text-3xl justify-center mx-auto items-center font-bold"

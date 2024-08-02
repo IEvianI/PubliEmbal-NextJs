@@ -24,13 +24,6 @@ const SectionMetiers = () => {
     console.log(response);
   }, [response]);
 
-  const handleSlideChange = (index) => {
-    if (response && response.data && response.data.length > index) {
-      const current = response.data[index].attributes;
-      setCurrentMetier({ title: current.metier_title, color: current.metier_color });
-    }
-  };
-
   if (isLoading) return <div>Chargement...</div>;
   if (error) return <pre>{JSON.stringify(error, null, 2)}</pre>;
 
@@ -45,7 +38,7 @@ const SectionMetiers = () => {
         </h2>
         <img src="/flèche-2.svg" alt="" className='flex items-center justify-center mx-auto' style={{paddingRight: '32%', transform: 'translateY(-5.5rem)'}}/>
         {response && response && (
-          <SplideCarousel slides={response} options={OPTIONS} onSlideChange={handleSlideChange} />
+          <SplideCarousel slides={response} options={OPTIONS}  />
         )}
       </div>
       <div className="relative w-full flex items-center justify-center">
