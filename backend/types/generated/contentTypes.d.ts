@@ -956,6 +956,161 @@ export interface ApiSecondSectionSecondSection extends Schema.SingleType {
   };
 }
 
+export interface ApiSectionFiveSectionFive extends Schema.SingleType {
+  collectionName: 'section_fives';
+  info: {
+    singularName: 'section-five';
+    pluralName: 'section-fives';
+    displayName: 'Section_five';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_approche: Attribute.String;
+    title_approche_2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::section-five.section-five',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::section-five.section-five',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSectionFourSectionFour extends Schema.SingleType {
+  collectionName: 'section_fours';
+  info: {
+    singularName: 'section-four';
+    pluralName: 'section-fours';
+    displayName: 'Section-four';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_service_client: Attribute.String;
+    title_service_client_2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::section-four.section-four',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::section-four.section-four',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSectionSevenSectionSeven extends Schema.SingleType {
+  collectionName: 'section_sevens';
+  info: {
+    singularName: 'section-seven';
+    pluralName: 'section-sevens';
+    displayName: 'Section-seven';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_faq: Attribute.String;
+    title_faq_2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::section-seven.section-seven',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::section-seven.section-seven',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiSectionSixSectionSix extends Schema.SingleType {
+  collectionName: 'section_sixes';
+  info: {
+    singularName: 'section-six';
+    pluralName: 'section-sixes';
+    displayName: 'Section-six';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_news: Attribute.String;
+    title_news_2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::section-six.section-six',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::section-six.section-six',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiThirdSectionThirdSection extends Schema.SingleType {
+  collectionName: 'third_sections';
+  info: {
+    singularName: 'third-section';
+    pluralName: 'third-sections';
+    displayName: 'Third-section';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    title_lois: Attribute.String;
+    title_lois_2: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::third-section.third-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::third-section.third-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 declare module '@strapi/types' {
   export module Shared {
     export interface ContentTypes {
@@ -979,6 +1134,11 @@ declare module '@strapi/types' {
       'api::matiere.matiere': ApiMatiereMatiere;
       'api::metier.metier': ApiMetierMetier;
       'api::second-section.second-section': ApiSecondSectionSecondSection;
+      'api::section-five.section-five': ApiSectionFiveSectionFive;
+      'api::section-four.section-four': ApiSectionFourSectionFour;
+      'api::section-seven.section-seven': ApiSectionSevenSectionSeven;
+      'api::section-six.section-six': ApiSectionSixSectionSix;
+      'api::third-section.third-section': ApiThirdSectionThirdSection;
     }
   }
 }

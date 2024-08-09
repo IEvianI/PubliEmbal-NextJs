@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_sevens",
+  "info": {
+    "singularName": "section-seven",
+    "pluralName": "section-sevens",
+    "displayName": "Section-seven"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_faq": {
+      "type": "string"
+    },
+    "title_faq_2": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_fives",
+  "info": {
+    "singularName": "section-five",
+    "pluralName": "section-fives",
+    "displayName": "Section_five"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_approche": {
+      "type": "string"
+    },
+    "title_approche_2": {
+      "type": "string"
+    }
+  }
+}

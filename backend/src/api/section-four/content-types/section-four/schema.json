@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_fours",
+  "info": {
+    "singularName": "section-four",
+    "pluralName": "section-fours",
+    "displayName": "Section-four"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_service_client": {
+      "type": "string"
+    },
+    "title_service_client_2": {
+      "type": "string"
+    }
+  }
+}

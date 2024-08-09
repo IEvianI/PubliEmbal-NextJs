@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "section_sixes",
+  "info": {
+    "singularName": "section-six",
+    "pluralName": "section-sixes",
+    "displayName": "Section-six"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_news": {
+      "type": "string"
+    },
+    "title_news_2": {
+      "type": "string"
+    }
+  }
+}

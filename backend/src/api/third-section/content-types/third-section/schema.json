@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "third_sections",
+  "info": {
+    "singularName": "third-section",
+    "pluralName": "third-sections",
+    "displayName": "Third-section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title_lois": {
+      "type": "string"
+    },
+    "title_lois_2": {
+      "type": "string"
+    }
+  }
+}
