@@ -52,7 +52,7 @@ const SectionLois = () => {
                     </h1>
                     <div className='max-w-lg rounded-lg border-angled p-8' style={{padding: '30px'}}>
                         <h2 className="text-xl text-custom-green font-bold mb-4">
-                            {selectedAttributes.loi_title || 'Nouveau marquage pour les gobelets carton'}
+                            <span className='highlight'>{selectedAttributes.loi_title_desc_1}</span> <span>{selectedAttributes.loi_title_desc_2}</span>
                         </h2>
                         <p>{selectedAttributes.loi_desc}</p>
                         <div className="flex justify-end">

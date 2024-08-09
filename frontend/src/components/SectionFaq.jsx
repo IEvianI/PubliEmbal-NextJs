@@ -22,11 +22,11 @@ const SectionFaq = () => {
                             <Disclosure key={index}>
                                 {({ open }) => (
                                     <>
-                                        <DisclosureButton className="flex justify-between max-[767px]:px-6 max-[767px]:text-2xl w-full px-12 py-4 text-3xl font-primary font-bold text-left text-custom-green bg-white border-2 border-custom-green rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-opacity-75 mb-4">
+                                        <DisclosureButton className={`accordeon-custom text-custom-green mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex justify-between items-center`}>
                                             <span>{faq.question}</span>
                                             <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-10 h-10 text-custom-green`} />
                                         </DisclosureButton>
-                                        <DisclosurePanel className="px-4 pt-4 pb-2 text-sm text-gray-500 bg-gray-50 border-2 border-t-0 border-custom-green rounded-lg mb-4">
+                                        <DisclosurePanel className="panel-custom p-4 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
                                             {faq.answer}
                                         </DisclosurePanel>
                                     </>
