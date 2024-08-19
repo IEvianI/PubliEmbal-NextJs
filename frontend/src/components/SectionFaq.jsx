@@ -12,7 +12,7 @@ const SectionFaq = () => {
 
     return (
         <section className="section-faq py-20">
-            <div className="2xl:w-11/12 mx-auto px-4">
+            <div className="2xl:w-11/12 mx-auto 2xl:px-4">
                 <h2 className="text-6xl font-bold text-custom-green -mb-24 max-[767px]:text-4xl font-secondary text-center" style={{fontWeight: '900'}}>CECI EST UN TITRE<br></br> POUR LE SEO</h2>
                 <img src="arrow-faq.svg" className='arrow-faq-mobile' alt="" style={{transform: 'translateY(2rem) translateX(26rem)'}} />
                 <div className="flex justify-between items-center mb-8">

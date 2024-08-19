@@ -58,10 +58,10 @@ const SectionLois = () => {
                             <span className='highlight'>{selectedAttributes.loi_title_desc_1}</span> <span>{selectedAttributes.loi_title_desc_2}</span>
                         </h2>
                         <div className='max-[1400px]:hidden'>
-                        <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '480px', left: '90px', width: '20px'}} />
-            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '480px', right: '1330px', width: '20px'}} />
+                        <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '53%', left: '90px', width: '20px'}} />
+            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '53%', right: '64%', width: '20px'}} />
             <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile' style={{position: 'absolute', bottom: '160px', left: '90px', width: '20px'}} />
-            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '160px', right: '1330px', width: '20px'}} />
+            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '160px', right: '64%', width: '20px'}} />
             </div>
                         <p>{selectedAttributes.loi_desc}</p>
                         </div>

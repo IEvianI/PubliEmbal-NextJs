@@ -26,13 +26,14 @@ const FirstSection = () => {
   return (
     <div className="p-12 text-center relative">
         <div className='mx-0 md:mx-24 2xl:mx-96'>
-          <h1 className="font-bold mb-4 font-secondary uppercase text-6xl max-[767px]:text-4xl p-12 text-custom-green">
+          <h1 className="font-bold mb-4 font-secondary uppercase text-6xl max-[767px]:text-4xl p-12 text-custom-green" style={{
+    backgroundImage: "url('/border-angles.png')",
+    backgroundSize: "contain",
+    backgroundPosition: "left", 
+    backgroundRepeat: "no-repeat"
+  }}>
             <span>{data.slider_baseline}</span><br></br> <span>{data.slider_baseline_3}</span> <span className='font-third font-regular normal-case highlight'>{data.slider_baseline_2}</span>
           </h1>
-          <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '45px', left: '430px', width: '20px'}} />
-            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '45px', right: '430px', width: '20px'}} />
-            <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile' style={{position: 'absolute', bottom: '685px', left: '430px', width: '20px'}} />
-            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '685px', right: '430px', width: '20px'}} />
         </div>
         <p className="flex text-lg mb-6 max-[767px]:mb-2 w-1/3 max-[767px]:w-full mx-auto items-center justify-center text-gray-600">{data.slider_short_description}</p>
         

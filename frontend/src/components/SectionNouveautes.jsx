@@ -8,32 +8,32 @@ const SectionNouveautes = () => {
         <div className="relative bottom-32 w-full">
                 <img src="Gobelets Dessin PUB 3.png" alt="Gobelet" className="absolute -top-10 left-20 max-[767px]:w-36 max-[767px]:top-0" />
             </div>
-        <div className="w-11/12 justify-center items-center mx-auto py-20 pb-32 px-8">
+        <div className="w-11/12 justify-center items-center mx-auto py-20 pb-32">
             <div className="flex justify-center text-center">
                 <h1 style={{ fontWeight: '900' }} className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">
                     VOUS FAIRE DECOUVRIR<br /> NOS NOUVEAUTES
                 </h1>
             </div>
-            <div className="flex max-[767px]:flex-col justify-between items-start">
-                <div className="w-3/4 mr-24 max-[1400px]:mr-4 max-[767px]:w-full">
-                    <div className=" flex max-[767px]:flex-col flex-row p-4 rounded-lg mb-4">
+            <div className="colonne flex max-[767px]:flex-col justify-between items-start">
+                <div className="mr-24 max-[1500px]:mr-4 max-[767px]:w-full">
+                    <div className="flex flex-row p-4 rounded-lg mb-4">
                         <div className='items-center mr-4'>
                         <div className='max-[1400px]:hidden'>
-                        <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile' style={{position: 'absolute', bottom: '130px', left: '50px', width: '20px'}} />
-            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '130px', right: '800px', width: '20px'}} />
-            <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '235px', left: '50px', width: '20px'}} />
-            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '235px', right: '800px', width: '20px'}} />
+                        <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile-bl' style={{position: 'absolute', bottom: '15%', left: '50px', width: '20px'}} />
+            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile-br' style={{position: 'absolute', bottom: '15%', right: '37%', width: '20px'}} />
+            <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile-tl' style={{position: 'absolute', top: '235px', left: '50px', width: '20px'}} />
+            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile-tr' style={{position: 'absolute', top: '235px', right: '37%', width: '20px'}} />
             </div>
-                        <button className="bg-white border-2 mt-10 border-custom-blue font-bold text-custom-blue text-2xl px-4 py-2 rounded mb-16">PRODUITS</button>
+                        <button className="bg-white border-2 border-custom-blue font-bold text-custom-blue text-2xl px-4 py-2 rounded mb-16">PRODUITS</button>
                         <p className="text-4xl font-bold text-custom-green max-[767px]:mb-12 mb-16" style={{fontSize: '38px'}}>De nouvelles boîtes en inox réemployables avec couvercles à clipser !</p>
                         <div className='text-right'>
-                        <button className="bg-white max-[767px]:mb-4 border-2 text-2xl border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
+                        <button className="bg-white mb-8 max-[767px]:mb-4 border-2 text-2xl border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
                         </div>
                         </div>
                         <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="ml-12 w-full rounded-lg" />
                     </div>
                 </div>
-                <div className="w-2/4 max-[1400px]:w-1/4 max-[767px]:w-full">
+                <div className="colonne-product w-2/4 max-[767px]:w-full">
                     <div className="flex justify-around mb-4">
                         <button
                             className={`w-1/2 mr-2 py-2 text-xl font-bold ${activeTab === 'produits' ? 'bg-custom-blue rounded-lg border-2 border-custom-blue text-white' : 'bg-white text-custom-green border-2 rounded-lg border-custom-blue'}`}
