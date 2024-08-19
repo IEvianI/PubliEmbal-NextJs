@@ -26,7 +26,7 @@ function MetiersListItem({ metier, isCenterSlide }) {
           style={{ borderBottomRightRadius: '40px' }}
         />
         <div
-          className="absolute -bottom-0 flex gap-2 flex-row left-1/2 transform -translate-x-1/2 pl-2.5 z-20 pr-2.5 text-white text-center rounded-lg py-2 text-2xl font-secondary font-extrabold uppercase"
+          className="absolute -bottom-0 flex gap-2 flex-row left-1/2 transform -translate-x-1/2 w-full items-center justify-center z-20 text-white text-center rounded-lg py-2 text-2xl font-secondary font-extrabold uppercase"
           style={{ backgroundColor: metier_color }}
         >
           {metier_title}

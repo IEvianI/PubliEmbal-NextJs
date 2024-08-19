@@ -13,54 +13,54 @@ const SectionApproche = () => {
                     <div className="">
                         <Disclosure>
                             {({ open }) => (
-                                <>
-                                    <DisclosureButton className={`accordeon-custom text-custom-green mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex justify-between items-center`}>
+                                <div className='disclosure-custom'>
+                                    <DisclosureButton className={`accordeon-custom text-custom-green mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex gap-2 items-center`}>
+                                    <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                         <span>Management de la qualité</span>
-                                        <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                     </DisclosureButton>
-                                    <DisclosurePanel className="panel-custom p-4 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
+                                    <DisclosurePanel className="panel-custom p-8 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit.</p>
                                     </DisclosurePanel>
-                                </>
+                                </div>
                             )}
                         </Disclosure>
                         <Disclosure>
                             {({ open }) => (
-                                <>
-                                    <DisclosureButton className={`accordeon-custom text-custom-green text-custom mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex justify-between items-center`}>
+                                <div className='disclosure-custom'>
+                                    <DisclosureButton className={`accordeon-custom text-custom-green text-custom mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex gap-2 items-center`}>
+                                    <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                         <span>Les achats responsables</span>
-                                        <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                     </DisclosureButton>
-                                    <DisclosurePanel className="panel-custom p-4 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
+                                    <DisclosurePanel className="panel-custom p-8 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit.</p>
                                     </DisclosurePanel>
-                                </>
+                                </div>
                             )}
                         </Disclosure>
                         <Disclosure>
                             {({ open }) => (
-                                <>
-                                    <DisclosureButton className={`accordeon-custom text-custom-green mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex justify-between items-center`}>
+                                <div className='disclosure-custom'>
+                                    <DisclosureButton className={`accordeon-custom text-custom-green mb-4 w-full text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex gap-2 items-center`}>
+                                    <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                         <span>Nos certifications</span>
-                                        <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                     </DisclosureButton>
-                                    <DisclosurePanel className="panel-custom p-4 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
+                                    <DisclosurePanel className="panel-custom p-8 bg-gray-50 mb-4 -mt-4 border-2 border-custom-green border-t-0 rounded-b-lg">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit.</p>
                                     </DisclosurePanel>
-                                </>
+                                </div>
                             )}
                         </Disclosure>
                         <Disclosure>
                             {({ open }) => (
-                                <>
-                                    <DisclosureButton className={`accordeon-custom w-full text-custom-green text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex justify-between items-center`}>
+                                <div className='disclosure-custom'>
+                                    <DisclosureButton className={`accordeon-custom w-full text-custom-green text-3xl text-left font-primary font-bold bg-white border-2 border-custom-green ${open ? 'rounded-t-lg' : 'rounded-lg'} px-6 py-4 flex gap-2 items-center`}>
+                                    <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                         <span>Notre démarche RSE</span>
-                                        <ChevronUp className={`${open ? 'transform rotate-180' : ''} w-5 h-5 text-black`} />
                                     </DisclosureButton>
-                                    <DisclosurePanel className="panel-custom p-4 bg-gray-50 border-2 border-custom-green border-t-0 rounded-b-lg">
+                                    <DisclosurePanel className="panel-custom p-8 bg-gray-50 border-2 border-custom-green border-t-0 rounded-b-lg">
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean eu mattis augue. Pellentesque ultricies tempor mi, eget pulvinar elit.</p>
                                     </DisclosurePanel>
-                                </>
+                                </div>
                             )}
                         </Disclosure>
                     </div>

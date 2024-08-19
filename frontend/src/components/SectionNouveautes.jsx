@@ -15,17 +15,25 @@ const SectionNouveautes = () => {
                 </h1>
             </div>
             <div className="flex max-[767px]:flex-col justify-between items-start">
-                <div className="w-3/4 mr-20 max-[767px]:w-full">
-                    <div className="border-2 border-custom-blue flex max-[767px]:flex-col flex-row p-4 rounded-lg mb-4">
-                        <div className='ml-4 mr-4'>
-                        <button className="bg-white border-2 border-custom-blue text-custom-blue px-4 py-2 rounded mb-12">PRODUITS</button>
-                        <p className="text-xl font-bold text-custom-green max-[767px]:mb-12 mb-60" style={{fontSize: '38px'}}>De nouvelles boîtes en inox réemployables avec couvercles à clipser !</p>
-                        <button className="bg-white max-[767px]:mb-4 border-2 border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
+                <div className="w-3/4 mr-24 max-[1400px]:mr-4 max-[767px]:w-full">
+                    <div className=" flex max-[767px]:flex-col flex-row p-4 rounded-lg mb-4">
+                        <div className='items-center mr-4'>
+                        <div className='max-[1400px]:hidden'>
+                        <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile' style={{position: 'absolute', bottom: '130px', left: '50px', width: '20px'}} />
+            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '130px', right: '800px', width: '20px'}} />
+            <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '235px', left: '50px', width: '20px'}} />
+            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '235px', right: '800px', width: '20px'}} />
+            </div>
+                        <button className="bg-white border-2 mt-10 border-custom-blue font-bold text-custom-blue text-2xl px-4 py-2 rounded mb-16">PRODUITS</button>
+                        <p className="text-4xl font-bold text-custom-green max-[767px]:mb-12 mb-16" style={{fontSize: '38px'}}>De nouvelles boîtes en inox réemployables avec couvercles à clipser !</p>
+                        <div className='text-right'>
+                        <button className="bg-white max-[767px]:mb-4 border-2 text-2xl border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
                         </div>
-                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="w-full rounded-lg" />
+                        </div>
+                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="ml-12 w-full rounded-lg" />
                     </div>
                 </div>
-                <div className="w-2/4 max-[767px]:w-full">
+                <div className="w-2/4 max-[1400px]:w-1/4 max-[767px]:w-full">
                     <div className="flex justify-around mb-4">
                         <button
                             className={`w-1/2 mr-2 py-2 text-xl font-bold ${activeTab === 'produits' ? 'bg-custom-blue rounded-lg border-2 border-custom-blue text-white' : 'bg-white text-custom-green border-2 rounded-lg border-custom-blue'}`}
@@ -40,36 +48,36 @@ const SectionNouveautes = () => {
                             Promotions
                         </button>
                     </div>
-                    <div className="border-2 border-custom-blue p-4 rounded-lg">
+                    <div className="border-custom-blue rounded-lg">
                         {activeTab === 'produits' && (
                             <div>
-                                <div className="text-custom-green flex mb-4">
+                                <div className="card-product items-center bg-white p-4 rounded-lg text-custom-green flex mb-4" style={{borderBottomRightRadius: "40px"}}>
                                     <img src="product-1-new.png" alt="Produit 1" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                    <p className='text-2xl font-primary font-bold'>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="text-custom-green flex mb-4">
+                                <div className="card-product items-center bg-white p-4 text-custom-green flex mb-4" style={{borderBottomRightRadius: "40px"}}>
                                     <img src="product-2-new.png" alt="Produit 2" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                    <p className='text-2xl font-primary font-bold'>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="text-custom-green flex mb-4">
-                                    <img src="product-3-new.png" alt="Produit 3" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                <div className="card-product items-center bg-white p-4 text-custom-green flex mb-4" style={{borderBottomRightRadius: "40px"}}>
+                                    <img src="product-3-new.png" alt="Produit 3" className="w-32 h-24 rounded-lg mr-4"/>
+                                    <p className='text-2xl font-primary font-bold'>Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
                             </div>
                         )}
                         {activeTab === 'promotions' && (
                             <div>
-                                <div className="text-custom-green flex mb-4">
+                                <div className="card-product items-center p-4 bg-white text-custom-green rounded-lg flex mb-4" style={{borderBottomRightRadius: "40px"}}>
                                     <img src="product-3-new.png" alt="Promotion 1" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Promo 1: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                    <p className='text-2xl font-primary font-bold'>Promo 1: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="text-custom-green flex mb-4">
+                                <div className="card-product items-center p-4 bg-white text-custom-green rounded-lg flex mb-4" style={{borderBottomRightRadius: "40px"}}>
                                     <img src="product-1-new.png" alt="Promotion 2" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Promo 2: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                    <p className='text-2xl font-primary font-bold'>Promo 2: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
-                                <div className="text-custom-green flex mb-4">
+                                <div className="card-product items-center p-4 bg-white text-custom-green rounded-lg flex mb-4" style={{borderBottomRightRadius: "40px"}}>
                                     <img src="product-2-new.png" alt="Promotion 3" className="w-32 h-24 rounded-lg mr-4" />
-                                    <p>Promo 3: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
+                                    <p className='text-2xl font-primary font-bold'>Promo 3: Un sachet L avec une ouverture sur les 2 côtés pour emballer de multiples produits à emporter...</p>
                                 </div>
                             </div>
                         )}

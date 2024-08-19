@@ -50,11 +50,21 @@ const SectionLois = () => {
                     <h1 style={{fontWeight: '900'}} className="text-6xl max-[767px]:text-4xl font-secondary text-custom-green font-bold mb-8 hidden md:block">
                         VOUS ACCOMPAGNER<br /> AVEC DES GAMMES CONFORMES AUX LOIS
                     </h1>
-                    <div className='max-w-lg rounded-lg border-angled p-8' style={{padding: '30px'}}>
+                    <div className='max-w-lg rounded-lg p-8' style={{padding: '30px', backgroundImage: 'url(/Cadre%-%Lois.png)', backgroundSize: 'cover',
+       backgroundPosition: 'center',
+       backgroundRepeat: 'no-repeat', zIndex: 10}}>
+        <div style={{paddingLeft: '50px'}}>                     
                         <h2 className="text-xl text-custom-green font-bold mb-4">
                             <span className='highlight'>{selectedAttributes.loi_title_desc_1}</span> <span>{selectedAttributes.loi_title_desc_2}</span>
                         </h2>
+                        <div className='max-[1400px]:hidden'>
+                        <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile' style={{position: 'absolute', top: '480px', left: '90px', width: '20px'}} />
+            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile' style={{position: 'absolute', top: '480px', right: '1330px', width: '20px'}} />
+            <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile' style={{position: 'absolute', bottom: '160px', left: '90px', width: '20px'}} />
+            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile' style={{position: 'absolute', bottom: '160px', right: '1330px', width: '20px'}} />
+            </div>
                         <p>{selectedAttributes.loi_desc}</p>
+                        </div>
                         <div className="flex justify-end">
                             <button 
                                 className="mt-4 pl-10 pr-10 bg-white border-2 text-custom-blue px-4 py-2 rounded" 
