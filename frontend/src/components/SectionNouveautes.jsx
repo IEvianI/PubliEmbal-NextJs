@@ -16,14 +16,10 @@ const SectionNouveautes = () => {
             </div>
             <div className="colonne flex max-[767px]:flex-col justify-between items-start">
                 <div className="mr-24 max-[1500px]:mr-4 max-[767px]:w-full">
-                    <div className="flex flex-row p-4 rounded-lg mb-4">
+                    <div className="flex flex-row p-20 rounded-lg mb-4" style={{backgroundImage: 'url(/border-nouveautes.png)', backgroundSize: 'contain',
+       backgroundPosition: 'center',
+       backgroundRepeat: 'no-repeat'}}>
                         <div className='items-center mr-4'>
-                        <div className='max-[1400px]:hidden'>
-                        <img src="/angle-bottom-left.svg" alt="Angle Bottom Left" className='angle-mobile-bl' style={{position: 'absolute', bottom: '15%', left: '50px', width: '20px'}} />
-            <img src="/angle-bottom-right.svg" alt="Angle Bottom Right" className='angle-mobile-br' style={{position: 'absolute', bottom: '15%', right: '37%', width: '20px'}} />
-            <img src="/angle-top-left.svg" alt="Angle Top Left" className='angle-mobile-tl' style={{position: 'absolute', top: '235px', left: '50px', width: '20px'}} />
-            <img src="/angle-top-right.svg" alt="Angle Top Right" className='angle-mobile-tr' style={{position: 'absolute', top: '235px', right: '37%', width: '20px'}} />
-            </div>
                         <button className="bg-white border-2 border-custom-blue font-bold text-custom-blue text-2xl px-4 py-2 rounded mb-16">PRODUITS</button>
                         <p className="text-4xl font-bold text-custom-green max-[767px]:mb-12 mb-16" style={{fontSize: '38px'}}>De nouvelles boîtes en inox réemployables avec couvercles à clipser !</p>
                         <div className='text-right'>
