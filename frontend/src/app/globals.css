@@ -217,7 +217,11 @@ body {
   }
 }
 
-@media screen and (max-width: 768px) {}
+@media screen and (max-width: 768px) {
+  .img-news-mob {
+    visibility: hidden !important;
+  }
+}
 
 .splide__arrow--prev,
 .splide__arrow--next {
@@ -296,4 +300,24 @@ body {
   .colonne-product {
     width: 100%;
   }
+  .responsive-nav {
+    width: 20% !important;
+  }
 }
+
+@media (min-width: 1024px) and (max-width: 1700px) {
+  .responsive-nav {
+    width: 20% !important;
+  }
+}
+
+.active-loi {
+  border: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .img-news-mob {
+    visibility: hidden !important;
+  }
+}
+

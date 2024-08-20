@@ -16,7 +16,7 @@ const SectionNouveautes = () => {
             </div>
             <div className="colonne flex max-[767px]:flex-col justify-between items-start">
                 <div className="mr-24 max-[1500px]:mr-4 max-[767px]:w-full">
-                    <div className="flex flex-row p-20 rounded-lg mb-4" style={{backgroundImage: 'url(/border-nouveautes.png)', backgroundSize: 'contain',
+                    <div className="bg-news flex flex-row p-20 rounded-lg mb-4" style={{backgroundImage: 'url(/border-nouveautes.png)', backgroundSize: 'contain',
        backgroundPosition: 'center',
        backgroundRepeat: 'no-repeat'}}>
                         <div className='items-center mr-4'>
@@ -26,7 +26,7 @@ const SectionNouveautes = () => {
                         <button className="bg-white mb-8 max-[767px]:mb-4 border-2 text-2xl border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
                         </div>
                         </div>
-                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="ml-12 w-full rounded-lg" />
+                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="img-news-mob ml-12 w-full rounded-lg" />
                     </div>
                 </div>
                 <div className="colonne-product w-2/4 max-[767px]:w-full">
