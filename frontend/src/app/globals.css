@@ -215,6 +215,12 @@ body {
   body {
     overflow-x: hidden !important;
   }
+  .splide__arrow.splide__arrow--prev {
+    left:1% !important;
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 1% !important;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -321,3 +327,35 @@ body {
   }
 }
 
+.splide__pagination__page {
+  background-color: rgba(0, 0, 0, 0.20) !important;
+  width: 10px !important;
+  height: 10px !important;
+}
+
+.splide__pagination__page.is-active {
+  height: 10px !important;
+  width: 10px !important;
+}
+
+@media screen and (min-width: 1024px) {
+.splide__pagination.splide__pagination--ltr {
+  gap: 65px !important;
+}
+.splide__arrow.splide__arrow--prev {
+  left:10% !important;
+}
+.splide__arrow.splide__arrow--next {
+  right: 10% !important;
+}
+}
+
+@media screen and (max-width: 1024px) {
+  .splide__pagination.splide__pagination--ltr {
+    gap: 10px !important;
+  }
+}
+
+.splide__arrow {
+  top: 111% !important;
+}
