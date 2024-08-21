@@ -119,7 +119,7 @@ body {
   top: 0;
   bottom: 0;
   width: 4px;
-  background: #000; /* Adjust the color as needed */
+  background: #000; 
 }
 
 .border-sides::before {
@@ -139,7 +139,7 @@ body {
   align-items: center;
   justify-content: center;
   top: -40px;
-  left: 20%; /* Ajustez cette valeur pour contrôler la distance verticale */
+  left: 25%;
 }
 
 .arrow-container-sc {
@@ -148,7 +148,7 @@ body {
   align-items: center;
   justify-content: center;
   top: 10px;
-  left: 32%; /* Ajustez cette valeur pour contrôler la distance verticale */
+  left: 32%; 
 }
 
 .arrow-image {
@@ -338,17 +338,57 @@ body {
   width: 10px !important;
 }
 
-@media screen and (min-width: 1024px) {
-.splide__pagination.splide__pagination--ltr {
-  gap: 65px !important;
+@media (min-width: 1600px) and (max-width: 1700px) {
+  .splide__pagination.splide__pagination--ltr {
+    gap: 65px !important;
+  }
+  .splide__pagination.splide__pagination--ltr {
+    gap: 65px !important;
+  }
+  .splide__arrow.splide__arrow--prev {
+    left:20% !important;
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 20% !important;
+  }
 }
-.splide__arrow.splide__arrow--prev {
-  left:10% !important;
+
+@media screen and (min-width: 1700px) {
+  .splide__pagination.splide__pagination--ltr {
+    gap: 75px !important;
+  }
+  .splide__arrow.splide__arrow--prev {
+    left:23% !important;
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 23% !important;
+  }
 }
-.splide__arrow.splide__arrow--next {
-  right: 10% !important;
+
+@media (min-width: 767px) and (max-width: 1024px) {
+  .splide__pagination.splide__pagination--ltr {
+    gap: 50px !important;
+  }
+  .splide__arrow.splide__arrow--prev {
+    left: 28% !important;
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 28% !important;
+  }
 }
+
+@media (min-width: 1024px) and (max-width: 1600px) {
+  .splide__pagination.splide__pagination--ltr {
+    gap: 45px !important;
+  }
+  .splide__arrow.splide__arrow--prev {
+    left:15% !important;
+  }
+  .splide__arrow.splide__arrow--next {
+    right: 15% !important;
+  }
 }
+
 
 @media screen and (max-width: 1024px) {
   .splide__pagination.splide__pagination--ltr {
