@@ -321,11 +321,7 @@ body {
   border: none;
 }
 
-@media screen and (max-width: 1024px) {
-  .img-news-mob {
-    visibility: hidden !important;
-  }
-}
+
 
 .splide__pagination__page {
   background-color: rgba(0, 0, 0, 0.20) !important;
@@ -398,4 +394,15 @@ body {
 
 .splide__arrow {
   top: 111% !important;
+}
+
+#splide02 {
+  gap: 100px !important;
+}
+
+
+@media screen and (max-width: 1300px) {
+  .colonne-product-mob {
+    width: 100% !important;
+  }
 }

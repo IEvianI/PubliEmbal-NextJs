@@ -37,6 +37,7 @@ const SectionMatieres = () => {
     gap: '1rem',
     pagination: true,
     arrows: true,
+    arrowPath: 'M18 30.9231L26.6154 22.3077L18 13.6923M2 22C2 10.9543 10.9543 2 22 2C33.0457 2 42 10.9543 42 22C42 33.0457 33.0457 42 22 42C10.9543 42 2 33.0457 2 22Z',
     breakpoints: {
       768: {
         perPage: 1,

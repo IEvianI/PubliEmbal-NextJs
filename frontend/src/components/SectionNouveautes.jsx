@@ -8,14 +8,14 @@ const SectionNouveautes = () => {
         <div className="relative bottom-32 w-full">
                 <img src="Gobelets Dessin PUB 3.png" alt="Gobelet" className="absolute -top-10 left-20 max-[767px]:w-36 max-[767px]:top-0" />
             </div>
-        <div className="w-11/12 justify-center items-center mx-auto py-20 pb-32">
+        <div className="justify-center items-center px-8 py-20 pb-32">
             <div className="flex justify-center text-center">
                 <h1 style={{ fontWeight: '900' }} className="text-6xl max-[767px]:text-4xl font-bold font-secondary text-custom-green mb-16">
                     VOUS FAIRE DECOUVRIR<br /> NOS NOUVEAUTES
                 </h1>
             </div>
-            <div className="colonne flex max-[767px]:flex-col justify-between items-start">
-                <div className="mr-24 max-[1500px]:mr-4 max-[767px]:w-full">
+            <div className="flex max-[1350px]:flex-col max-[1350px]:justify-center max-[1350px]:items-center max-[1350px]:w-full justify-between">
+                <div className="mr-8 max-[1500px]:mr-4 max-[767px]:w-full">
                     <div className="bg-news flex flex-row p-20 rounded-lg mb-4" style={{backgroundImage: 'url(/border-nouveautes.png)', backgroundSize: 'contain',
        backgroundPosition: 'center',
        backgroundRepeat: 'no-repeat'}}>
@@ -26,10 +26,10 @@ const SectionNouveautes = () => {
                         <button className="bg-white mb-8 max-[767px]:mb-4 border-2 text-2xl border-custom-blue text-custom-blue px-4 py-2 rounded">Bouton</button>
                         </div>
                         </div>
-                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="img-news-mob ml-12 w-full rounded-lg" />
+                        <img src="AMBIANCE-POTS-MULTIFOOD 1 22.png" alt="Nouveautés" className="img-news-mob w-full rounded-lg" />
                     </div>
                 </div>
-                <div className="colonne-product w-2/4 max-[767px]:w-full">
+                <div className="colonne-product-mob max-[1350px]:justify-center max-[1350px]:items-center w-3/4 max-[767px]:w-full">
                     <div className="flex justify-around mb-4">
                         <button
                             className={`w-1/2 mr-2 py-2 text-xl font-bold ${activeTab === 'produits' ? 'bg-custom-blue rounded-lg border-2 border-custom-blue text-white' : 'bg-white text-custom-green border-2 rounded-lg border-custom-blue'}`}
